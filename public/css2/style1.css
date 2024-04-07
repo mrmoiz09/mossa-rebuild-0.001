@@ -1,0 +1,1529 @@
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #EB2E32;
+    --blueColor: #11365F;
+    --silverColor: #B1B1B1;
+    --greyColor: #F4F4F4;
+    --lightGreyColor: #353535;
+}
+body {
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    overflow-x: hidden;
+    background-color: var(--greyColor);
+    color: var(--primaryColor);
+}
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+a {
+    text-decoration: none !important;
+    transition: all 0.6s ease-in-out;
+}
+a:hover {
+    transition: all 0.6s ease-in-out;
+}
+:focus, :focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.primary-bg {
+    background-color: var(--primaryColor);
+}
+.blue-bg {
+    background-color: var(--blueColor);
+}
+.light-grey-bg {
+    background-color: var(--lightGreyColor);
+}
+.grey-bg {
+    background-color: var(--greyColor);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.5;
+}
+h1, .h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h4, .h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 16px;
+}
+p {
+    font-size: 14px;
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--primaryColor);
+    border-radius: 0;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.6s ease-in-out;
+}
+.btn-lg {
+    font-size: 20px;
+    padding: 16px 75px;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--silverColor);
+    transform: skewX(-20deg);
+    z-index: -1;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover:before,
+.btn:hover:after {
+    transform: skewX(0);
+    transition: all 0.6s ease-in-out;
+}
+.btn-white:hover:after {
+    background-color: #ffffff;
+}
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 6px;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    transform: skewX(-20deg);
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+.btn-primary-line::after {
+    background-color: #77787B;
+}
+.btn:hover:before {
+    background-color: var(--secondaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.btn-white {
+    color: var(--primaryColor);
+}
+.btn-white::before {
+    background-color: #ffffff;
+}
+.btn-white:after {
+    background-color: #83080A;
+}
+.centered-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+.centered-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+.form-group {
+    position: relative;
+}
+.form-group > label {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+}
+.form-group .form-control {
+    height: auto;
+    background-color: #ffffff;
+    border-color: var(--primaryColor);
+    color: #000000;
+    font-weight: 300;
+    padding: 13px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.form-group textarea.form-control {
+    height: 100px;
+    resize: none;
+}
+.form-group .form-control::placeholder {
+    color: var(--primaryColor);
+}
+.form-group select.form-control {
+    color: var(--primaryColor);
+    appearance: none;
+    background: #CBCBCB url(../images/down-caret.svg) no-repeat 95% center / 1rem;
+}
+.datepicker {
+    background: url(../images/calendar.svg) no-repeat 95% center / 1.5rem;
+}
+.timepicker {
+    background: url(../images/clock.svg) no-repeat 95% center / 1rem;
+}
+.overlay { position: relative; }
+.overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primaryColor);
+    opacity: 0.6;
+    z-index: 1;
+}
+.gradient-overlay:before {
+    background: linear-gradient(180deg, rgba(24, 14, 41, 0.29) 0%, var(--blueColor) 90.1%);
+    opacity: 1;
+}
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1650px;
+    }
+}
+.ui-timepicker-container,
+.ui-datepicker {
+    z-index: 10 !important;
+}
+/* Header CSS */
+.header.header-2 {
+    position: relative;
+    background-color: #353535;
+}
+.mobile__menu {
+    display: none;
+}
+.inner-page {
+    background-color: rgba(4, 7, 39, 0.5);
+}
+.inner-page .header__main {
+    padding-bottom: 10px;
+}
+.inner-page.fixed-header .header__main {
+    padding: 0;
+}
+.header__top {
+    padding: 20px 0;
+}
+.header__top--links, .header__top ul {
+    align-items: center;
+}
+.header__top--logos li {
+    margin-right: 35px;
+}
+.header__top--social li {
+    margin-right: 30px;
+}
+.header__top--social li a {
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--social li a:hover {
+    box-shadow: 0 3px 0 0 #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li:not(:last-child) a {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #ED192D;
+}
+.header__top--social li a img {
+    transform: scale(1);
+    transition: all 0.6s ease-in-out;
+}
+.header__top--social li a:hover img {
+    transform: scale(0.9);
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li a:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-in-out;
+} 
+.mobile__items, .header__top--action img { display: none; }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+}
+.fixed-header {
+    padding: 15px 0;
+    background-color: var(--lightGreyColor);
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease-in-out;
+}
+.fixed-header .header__top {
+    display: none;
+}
+.header .container-fluid {
+    padding: 0 100px;
+}
+.navbar-nav .nav-item {
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-item .menu-arrow {
+    margin-left: 10px;
+    margin-top: -3px;
+}
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 80px;
+}
+.navbar-nav .nav-item .nav-link,
+.sub-menu-item a {
+    padding: 0;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--primaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item.active .nav-link + .menu-arrow path,
+.navbar-nav .nav-item .nav-link:hover + .menu-arrow path {
+    stroke: var(--primaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item .nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item .nav-link:hover:after,
+.navbar-nav .nav-item.active .nav-link:after {
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.nav-sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    width: 250px;
+    height: auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item:hover .nav-sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.nav-sub-menu .sub-menu-item:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #FFFFFF;
+}
+.nav-sub-menu a:hover {
+    color: var(--secondaryColor);
+}
+.header-search .form-group .form-control {
+    background: rgba(255, 255, 255, 0.56);
+    border: 1px solid #A6A6A6;
+    border-radius: 100px;
+}
+.header-search .form-group .form-control::placeholder {
+    color: #ffffff;
+}
+.header-search .btn-search {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    left: auto;
+    bottom: auto;
+}
+/* Header CSS */
+
+/* Banner CSS */
+.hero__banner--block { 
+    position: relative; 
+    z-index: 2;
+}
+.hero__banner--img {
+    padding-top: 61%;
+}
+
+.hero__banner--content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: auto;
+    bottom: auto;
+    width: 1000px;
+    z-index: 1;
+}
+.hero__banner--content h1 {
+    margin-bottom: 20px;
+}
+/* Banner CSS */
+
+/* Category CSS */
+.car__cetegory--block .container {
+    margin-top: -150px;
+    position: relative;
+    z-index: 2;
+}
+.car__cetegory--block .row {
+    overflow: hidden;
+}
+.car__cetegory--item .car__cetegory--img {
+    padding-top: 115%;
+    border: 6px solid #ffffff;
+    border-radius: 10px;
+}
+.car__cetegory--item .car__cetegory--img img {
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item:hover .car__cetegory--img img {
+    -webkit-transform: translate3d(0,-70px,0);
+    transform: translate3d(0,-70px,0);
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item:hover .car__cetegory--img {
+    border: none;
+}
+.car__cetegory--item .car__cetegory--name {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: -80px;
+    right: auto;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name h4 {
+    line-height: normal;
+}
+.car__cetegory--item:hover .car__cetegory--name {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name,
+.car__cetegory--item .car__cetegory--name h2 {
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name:hover h2 {
+    color: #ffffff !important;
+    transition: all 0.6s ease-in-out;
+}
+/* Category CSS */
+
+/* About CSS */
+.about__marh--block {
+    padding: 170px 0;
+}
+.about__marh--block .row {
+    margin: 0 -50px;
+}
+.about__marh--block .row .col-lg-4 {
+    padding: 0 50px;
+}
+.about__marh--block .row .col-lg-4:not(:last-child) {
+    border-right: 1px solid rgba(227, 227, 227, 0.2);
+}
+.about__marh--col p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+/* About CSS */
+
+/* GMC Truck CSS */
+.gmc__truck--block {
+    padding: 160px 0;
+}
+.gmc__truck--block .row {
+    margin: 0 -40px;
+}
+.gmc__truck--block .row .col-lg-6 {
+    padding: 0 40px;
+}
+.gmc__truck--banner {
+    padding-top: 80%;
+    border-radius: 10px;
+}
+.gmc__truck--details h2 {
+    margin-bottom: 20px;
+}
+.gmc__truck--details p {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+.gmc__truck--details .btn:after {
+    background-color: #77787B;
+}
+/* GMC Truck CSS */
+
+/* Car Adventure CSS */
+.car__adventure--item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.car__adventure--item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90.12deg, #4A4A4A 32.6%, rgba(196, 196, 196, 0) 91.61%);
+    z-index: 1;
+}
+.car__adventure--details {
+    padding: 170px 0;
+    width: 500px;
+    position: relative;
+    z-index: 1;
+}
+.car__adventure--details h2 {
+    margin-bottom: 20px;
+}
+.car__adventure--details h4 {
+    margin-bottom: 30px;
+}
+.car__adventure--details p {
+    color: #ffffff;
+    font-size: 14px;
+}
+.car__adventure__slider .swiper-button {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.car__adventure__slider .swiper-button-next {
+    right: 80px;
+}
+.car__adventure__slider .swiper-button-prev {
+    left: 80px;
+}
+.car__adventure__slider .swiper-button:after {
+    font-size: 18px;
+    color: #ffffff;
+}
+/* Car Adventure CSS */
+
+/* CEO Block CSS */
+.ceo--block {
+    padding: 80px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.ceo--block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primaryColor);
+    opacity: 0.6;
+}
+.ceo__main {
+    position: relative;
+    padding: 50px 10px 0 50px;
+    background-color: #ffffff;
+    align-items: flex-end;
+}
+.ceo__image {
+    position: relative;
+}
+.ceo__image:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 115%;
+    height: 75%;
+    background-color: #353535;
+    z-index: -1;
+    transform: skewX(-12deg);
+}
+/* CEO Block CSS */
+
+/* Our Stories CSS */
+.our__stories--block {
+    padding: 70px 0 70px 8vw;
+    position: relative;
+}
+.our__stories--block .main__title {
+    position: relative;
+    z-index: 1;
+    width: 38%;
+    margin-bottom: 70px;
+}
+.our__stories--block .main__title h2 {
+    margin-bottom: 25px;
+}
+.our__stories--item {
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #E8E8E8;
+    margin-bottom: 5px;
+}
+.our__stories--item .our__stories--images {
+    border-radius: 20px;
+    padding-top: 56%;
+}
+.our__stories--item .our__stories--images img {
+    transform: scale(1);
+    transition: all 0.6s ease-in-out;
+}
+.our__stories--item:hover .our__stories--images img {
+    transform: scale(1.2);
+    transition: all 0.6s ease-in-out;
+}
+.our__stories--item .our__stories--details {
+    padding: 25px 15px;
+}
+.our__stories--item .our__stories--details h4 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+.our__stories--item .our__stories--details a {
+    font-size: 18px;
+    color: var(--primaryColor);
+}
+.our__stories__slider {
+    padding-top: 80px;
+}
+.our__stories__slider .swiper-button {
+    background-color: #3271B8;
+    border-radius: 50%;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    right: 10%;
+    top: 0;
+    margin: 0;
+}
+.our__stories__slider .swiper-button.swiper-button-disabled {
+    background-color: #235185;
+}
+.our__stories__slider .swiper-button:after {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.our__stories__slider .swiper-button-prev {
+    left: auto;
+    right: 17%;
+}
+/* Our Stories CSS */
+
+/* Enquiry Page CSS */
+.inner-page + main {
+    margin-top: 122px;
+}
+.page__hero--banner {
+    padding: 15% 0;
+    background-color: #D9D9D9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page__hero--title {
+    position: relative;
+    z-index: 2;
+}
+.page__hero--title h1 {
+    padding-bottom: 10px;
+}
+.page__hero--title h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) skewX(-30deg);
+    width: 100px;
+    height: 8px;
+    background-color: #ffffff;
+}
+.page__hero--title h1:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 60px);
+    transform: translateX(-50%) skewX(-30deg);
+    width: 10px;
+    height: 8px;
+    background-color: var(--secondaryColor);
+}
+
+.enquiry--block {
+    padding: 70px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.enquiry--block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #353535;
+    opacity: 0.7;
+}
+.page__title h2 {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ffffff;
+}
+.enquiry__form {
+    border-radius: 30px;
+    padding: 30px;
+}
+/* Enquiry Page CSS */
+
+/* Moosa Connet Page CSS */
+.app__store li:not(:last-child) {
+    margin-right: 1rem;
+}
+.accordion .card-header {
+    position: relative;
+    cursor: pointer;
+}
+.accordion .card-header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url('../images/minus.svg') no-repeat center / contain;
+}
+.accordion .card-header.collapsed:after {
+    background-image: url('../images/plus.svg');
+}
+.accordion .card-header h4 {
+    width: 80%;
+}
+/* Moosa Connet Page CSS */
+
+/* Rent A Car Page CSS */
+.rent_car--item h4 {
+    color: #FF8902;
+}
+.rent_car--item h6 {
+    color: #3A76E9;
+}
+.car__contact__detail p, .car__contact__detail a {
+    font-size: 15px;
+    color: var(--primaryColor);
+    line-height: normal;
+}
+.rent_car--block h3,
+.rent_car--block h3 a {
+    color: #FF8902;
+}
+/* Rent A Car Page CSS */
+
+/* Our Network Page CSS */
+.our__networks .tab-content {
+    padding-top: 1.2rem;
+}
+.network__info {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+.network__info p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.our__networks .nav-item {
+    flex: auto;
+    text-align: center;
+}
+.our__networks .nav-item .nav-link {
+    background-color: rgba(67, 67, 67, 0.1);
+    border-radius: 0;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 12px 20px 8px;
+}
+.our__networks .nav-item:not(:last-child) a {
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+.our__networks .nav-item .nav-link:hover,
+.our__networks .nav-item .nav-link.active {
+    background-color: rgba(67, 67, 67, 0.7);
+    color: #ffffff;
+}
+.location__item {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    height: calc(100% - 1.875rem);
+    margin-bottom: 1.875rem;
+}
+.location__item .card-header {
+    background-color: rgba(192, 20, 36, 0.8);
+}
+.location__item .card-header h4 {
+    align-items: center;
+}
+.location__item .card-header h4 svg {
+    margin-right: 10px;
+    width: 20px;
+}
+.location__item address {
+    font-weight: 600;
+}
+.location__item ul li:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.location__item ul li h5 {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+.location__item ul li a {
+    display: block;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.location_map {
+    padding-top: 40%;
+    position: relative;
+    overflow: hidden;
+}
+.location_map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+/* Our Network Page CSS */
+
+/* Footer CSS */
+.footer .container-fluid {
+    padding: 0 100px;
+    width: 70%;
+}
+.footer-wrapper {
+    padding: 50px 0;
+}
+.footer .footer-wrapper h4 {
+    margin-bottom: 25px;
+}
+.footer-widget ul li {
+    margin-bottom: 20px;
+}
+.footer-widget ul li a:hover {
+    font-weight: 800;
+    color: var(--primaryColor);
+    letter-spacing: 1px;
+}
+.footer a, .footer p {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+}
+.social-icons {
+    align-items: center;
+}
+.social-icons li {
+    margin-right: 15px;
+    margin-bottom: 0 !important;
+}
+.social-icons li a {
+    position: relative;
+    overflow: hidden;
+}
+.footer-widget ul li svg {
+    position: relative;
+    z-index: 9;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.footer-widget ul li a:hover svg {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.footer-widget ul li a:hover svg path {
+    fill: #ffffff;
+}
+.social-icons li a:hover {
+    color: var(--secondaryColor);
+}
+.footer__copyright {
+    background-color: #ECECEC;
+    padding: 20px 0;
+}
+.footer__copyright p {
+    color: var(--primaryColor);
+    line-height: normal;
+}
+/* Footer CSS */
+
+@media (max-width: 1800px) {
+    body {
+        font-size: 15px;
+    }
+    h1, .h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .btn-lg {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    /* Header CSS */
+    .header .container-fluid {
+        padding: 0 50px;
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 40px;
+    }
+    /* Header CSS */
+
+    /* About CSS */
+    .about__marh--block {
+        padding: 90px 0;
+    }
+    .about__marh--block .row {
+        margin: 0 -30px;
+    }
+    .about__marh--block .row .col-md-4 {
+        padding: 0 30px;
+    }
+    /* About CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--block {
+        padding: 80px 0;
+    }
+    .gmc__truck--block .row {
+        margin: 0 -20px;
+    }
+    .gmc__truck--block .row .col-lg-6 {
+        padding: 0 20px;
+    }
+    .gmc__truck--details p {
+        margin-bottom: 20px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        padding: 100px 0;
+        width: 40%;
+    }
+    .car__adventure__slider .swiper-button-next {
+        right: 40px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 40px;
+    }
+    /* Car Adventure CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 70px 0 70px 10vw;
+    }
+    .our__stories--block .main__title {
+        width: 60%;
+        margin-bottom: 50px;
+    }
+    .our__stories--block .main__title h2 {
+        margin-bottom: 15px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .enquiry__banner {
+        padding-top: 75%;
+    }
+    /* Enquiry Page CSS */
+
+    /* Footer CSS */
+    .footer .container-fluid {
+        padding: 0 50px;
+    }
+    .footer .footer-wrapper h4 {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .footer-widget ul li {
+        margin-bottom: 10px;
+    }
+    .footer-widget li a, .footer-widget p, .footer-widget li {
+        font-size: 12px;
+    }
+    .social-icons li {
+        margin-right: 10px;
+    }
+    .social-icons li a {
+        width: 25px;
+        height: 25px;
+    }
+    .social-icons li a img {
+        width: 15px;
+    }
+    .footer__copyright {
+        padding: 10px 0;
+    }
+    .footer__copyright p {
+        font-size: 12px;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 1280px) {
+    h1, .h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+
+    /* Header CSS */
+    .header .container-fluid {
+        padding: 0 20px;
+    }
+    .header__top--logos li {
+        margin-right: 25px;
+    }
+    .header__top--social li {
+        margin-right: 15px;
+    }
+    /* Header CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--block .row {
+        margin: 0 -15px;
+    }
+    .gmc__truck--block .row .col-lg-6 {
+        padding: 0 15px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure__slider .swiper-button-next {
+        right: 15px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 15px;
+    }
+    /* Car Adventure CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 70px 0 70px 30px;
+    }
+    /* Our Stories CSS */
+
+    /* Footer CSS */
+    .social-icons {
+        justify-content: flex-start !important;
+    }
+    .social-icons li:first-child {
+        width: 50px;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 1199px) {
+    /* Header CSS */
+    .header__top {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .inner-page .header__main {
+        padding-bottom: 0;
+    }
+    .fixed-header {
+        padding: 10px 0;
+    }
+    .header__top .header__top--logos, .header__top .header__top--social {
+        display: none !important;
+    }
+    .header__top .header__top--action {
+        padding-right: 50px;
+    }
+    .header__top .header__top--action .header__call span {
+        font-size: 0;
+    }
+    .header__top--action li img {
+        width: 20px;
+        height: 20px;
+    }
+    .header__top--logos li {
+        align-items: center;
+    }
+    .mobile__items, .header__top--action img { display: inline-block; }
+    .fixed-header {
+        background-color: #ffffff;
+    }
+    .fixed-header {
+        padding: 0;
+    }
+    .fixed-header .header__top {
+        display: block;
+        padding: 5px 0;
+    }
+    .mobile__menu {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        left: auto;
+        bottom: auto;
+        cursor: pointer;
+        z-index: 99;
+    }
+    .mobile__menu .mobile__line {
+        border-radius: 8px;
+        background-color: var(--primaryColor);
+        width: 30px;
+        height: 2px;
+        position: relative;
+    }
+    .mobile__menu .mobile__line:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .mobile__menu.show .mobile__line:nth-child(2) {
+        transform: rotate(-45deg);
+        top: -4px;
+    }
+    .mobile__menu.show .mobile__line:first-child {
+        transform: rotate(45deg);
+        top: 3px;
+    }
+    .mobile__menu.show .mobile__line:last-child {
+        display: none;
+    }
+    .header__main .navbar {
+        display: none;
+    }
+    .header__main .navbar.show {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: auto;
+        background-color: var(--primaryColor);
+        padding: 20px !important;
+        z-index: 9;
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: #ffffff;
+    }
+    /* Header CSS */
+
+    /* Banner CSS */
+    .hero__banner--content {
+        width: 80%;
+    }
+    /* Banner CSS */
+
+    /* About CSS */
+    .about__marh--block, .gmc__truck--block, .car__adventure--details {
+        padding: 50px 0;
+    }
+    .about__marh--col p {
+        margin-bottom: 20px;
+    }
+    /* About CSS */
+
+    /* CEO Block CSS */
+    .ceo--block {
+        padding: 70px 0 50px;
+    }
+    .ceo__main {
+        padding: 30px 0 20px 50px;
+    }
+    .ceo__image {
+        margin-top: -50px;
+    }
+    /* CEO Block CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 50px 15px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .inner-page + main {
+        margin-top: 75px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Rent A Car Page CSS */
+    .car__contact__detail p, .car__contact__detail a {
+        font-size: 14px;
+    }
+    /* Rent A Car Page CSS */
+}
+@media (max-width: 991px) {
+    /* Category CSS */
+    .car__cetegory--block .container {
+        margin-top: -50px;
+    }
+    /* Category CSS */
+
+    /* About CSS */
+    .about__marh--block .row {
+        margin: 0 -15px;
+    }
+    .about__marh--block .row .col-lg-4 {
+        padding: 0 15px;
+    }
+    .about__marh--block .row .col-lg-4:not(:last-child) {
+        border: none;
+        margin-bottom: 50px;
+    }
+    /* About CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--details {
+        margin-top: 30px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        width: 60%;
+    }
+    /* Car Adventure CSS */
+
+    /* CEO Block CSS */
+    .ceo__main {
+        padding: 30px 30px 0;
+        justify-content: flex-end !important;
+    }
+    .ceo--block .col-lg-4 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .ceo__image {
+        margin-top: 10px;
+    }
+    /* CEO Block CSS */
+
+     /* Enquiry Page CSS */
+     .inner-page + main {
+        margin-top: 66px;
+    }
+    .enquiry--block .col-md-12:first-child {
+        order: 1;
+    }
+    .enquiry__info {
+        margin-top: 30px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Footer CSS */
+    .footer .container-fluid {
+        width: 100%;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.4;
+    }
+    h1, .h1 {
+        font-size: 30px;
+    }
+    h1, h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4, h5 {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        margin-left: 8px
+    }
+    .btn-lg {
+        padding: 10px 30px;
+    }
+    
+    /* Header CSS */
+    .logo img {
+        width: 50px;
+    }
+    .header .container-fluid {
+        padding: 0 15px;
+    }
+    .header__top {
+        padding: 10px 0;
+    }
+    .header__top .col-md-4 {
+        max-width: 30%;
+        flex: 0 0 30%;
+    }
+    .header__top .col-md-8 {
+        max-width: 70%;
+        flex: 0 0 70%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    /* Header CSS */
+
+    /* Banner CSS */
+    .hero__banner--img {
+        padding-top: 150%;
+    }
+    .hero__banner--content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    /* Banner CSS */
+
+    /* Category CSS */
+    .car__cetegory--block .col-md-4 {
+        margin-bottom: 15px;
+    }
+    .car__cetegory--item .car__cetegory--name {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        padding: 5px;
+    }
+    .car__cetegory--item .car__cetegory--name h2 {
+        font-size: 18px;
+    }
+    .car__cetegory--item:hover .car__cetegory--img img {
+        transform: none;
+    }
+    /* Category CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        padding: 50px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .car__adventure--details h2 {
+        font-size: 30px;
+    }
+    .car__adventure--details h4 {
+        font-size: 16px;
+    }
+    .car__adventure__slider .swiper-button {
+        width: 25px;
+        height: 25px;
+    }
+    .car__adventure__slider .swiper-button:after {
+        font-size: 13px;
+    }
+    .car__adventure__slider .swiper-button-next {
+        right: 10px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 10px;
+    }
+    /* Car Adventure CSS */
+
+    /* CEO Block CSS */
+    .ceo__main {
+        padding: 20px 20px 0;
+    }
+    .ceo__main::before {
+        transform: none;
+        left: 15px;
+        right: 15px;
+    }
+    /* CEO Block CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block .main__title {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .page__title h2 {
+        padding: 12px 20px 8px;
+    }
+    .page__title h2:after {
+        border-width: 37px 15px 0 0;
+    }
+    .page__title h2:before { transform: skewX(-21deg); }
+    .inner-page + main {
+        margin-top: 71px;
+    }
+    .enquiry--block {
+        padding: 40px 0;
+    }
+    .form-group .form-control {
+        font-size: 14px;
+    }
+    .form-group select.form-control {
+        background-size: 14px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Rent A Car Page CSS */
+    .rent_car--item {
+        margin-bottom: 30px;
+    }
+    .rent__car__logo img {
+        width: 150px;
+    }
+    .car__contact__detail p {
+        flex-direction: column;
+    }
+    .car__contact__detail a:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .rent_car--block h3, .rent_car--block h3 a {
+        font-size: 1.4rem !important;
+    }
+    /* Rent A Car Page CSS */
+
+    /* Footer CSS */
+    .footer-wrapper {
+        padding: 40px 0 0;
+    }
+    .footer .container-fluid {
+        padding: 0 15px;
+    }
+    .footer .col-lg-2:last-child {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .footer__logo {
+        margin-bottom: 20px !important;
+    }
+    .footer .footer-wrapper h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .footer-widget ul li {
+        margin-bottom: 5px;
+    }
+    .footer-widget li a, .footer-widget p, .footer-widget li {
+        font-size: 11px;
+    }
+    /* Footer CSS */
+}
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+    .header__main .navbar.show {
+        height: calc(100vh - 70px);
+        overflow: auto;
+    }
+}
