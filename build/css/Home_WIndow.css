@@ -1,0 +1,2631 @@
+:root {
+    --primaryColor: #000000;
+    --secondaryColor: #EB2E32;
+    --blueColor: #11365F;
+    --silverColor: #B1B1B1;
+    --greyColor: #F4F4F4;
+    --lightGreyColor: #353535;
+    --lightGreyColor1: #212531;
+}
+body {
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    overflow-x: hidden;
+    background-color: var(--greyColor);
+    color: var(--primaryColor);
+}
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+a {
+    text-decoration: none !important;
+    transition: all 0.6s ease-in-out;
+}
+a:hover {
+    transition: all 0.6s ease-in-out;
+}
+:focus, :focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.primary-bg {
+    background-color: var(--primaryColor);
+}
+.blue-bg {
+    background-color: var(--blueColor);
+}
+.light-grey-bg {
+    background-color: var(--lightGreyColor);
+}
+.grey-bg {
+    background-color: var(--greyColor);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.5;
+}
+h1, .h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h4, .h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 16px;
+}
+p {
+    font-size: 14px;
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--primaryColor);
+    border-radius: 0;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 13px 30px 10px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.6s ease-in-out;
+}
+.download_brochure .download_btn{
+    color:#fff;
+}
+.download_brochure .download_btn svg{
+    margin-right:10px;
+    height: 20px;
+}
+.download_brochure .download_btn path {
+    fill:#fff;
+    transition:all 0.6s ease;
+}
+.download_brochure .download_btn.btn:before{
+    background-color: #eb2e32;
+}
+.download_brochure .download_btn.btn:after{
+    background-color:var(--silverColor);
+}
+.download_brochure .download_btn.btn:hover{
+    color:#000;
+    
+}
+.download_brochure .download_btn.btn:hover svg path{
+    fill:#000;
+    transition:all 0.6s ease;
+}
+.download_brochure .download_btn.btn:hover:before{
+    background-color:var(--silverColor);
+}
+.download_brochure .download_btn.btn:hover:after{
+    background-color:#eb2e32;
+}
+.btn-lg {
+    font-size: 20px;
+    padding: 16px 75px;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--silverColor);
+    transform: skewX(-20deg);
+    z-index: -1;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover:after {
+    background-color: #B1B1B1;
+    transition: all 0.6s ease-in-out;
+}
+.btn-white:hover:after {
+    background-color: #ffffff;
+}
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 6px;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    transform: skewX(-20deg);
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+.btn-primary-line::after {
+    background-color: #77787B;
+}
+.btn:hover:before {
+    background-color: var(--secondaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.btn-white {
+    color: var(--primaryColor);
+}
+.btn-white::before {
+    background-color: #ffffff;
+}
+.btn-white:after {
+    background-color: #83080A;
+}
+.centered-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.centered-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+.form-group {
+    position: relative;
+}
+.form-group > label {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+}
+.form-group .form-control {
+    height: auto;
+    background-color: #ffffff;
+    border-color: var(--primaryColor);
+    color: #000000;
+    font-weight: 300;
+    padding: 13px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.form-group textarea.form-control {
+    height: 100px;
+    resize: none;
+}
+.form-group .form-control::placeholder {
+    color: var(--primaryColor);
+}
+.form-group select.form-control {
+    color: var(--primaryColor);
+    appearance: none;
+    background: #CBCBCB url(/web/20231228143145im_/https://frontend.moosagroup.com/public/images/down-caret.svg) no-repeat 95% center / 1rem;
+}
+.datepicker {
+    background: url(/web/20231228143145im_/https://frontend.moosagroup.com/public/images/calendar.svg) no-repeat 95% center / 1.5rem;
+}
+.timepicker {
+    background: url(/web/20231228143145im_/https://frontend.moosagroup.com/public/images/clock.svg) no-repeat 95% center / 1rem;
+}
+.overlay { position: relative; }
+.overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primaryColor);
+    opacity: 0.6;
+    z-index: 1;
+}
+.gradient-overlay:before {
+    background: linear-gradient(180deg, rgba(24, 14, 41, 0.29) 0%, var(--blueColor) 90.1%);
+    opacity: 1;
+}
+@media (min-width: 1200px) {
+    .car_model--block .container-fluid {
+        --containerWidth: 1140px;
+        padding-right: calc((100% - var(--containerWidth)) / 2);
+    }
+    .model__view--block .container-fluid {
+        --containerWidth: 1140px;
+        padding-left: calc((100% - var(--containerWidth)) / 2);
+    }
+}
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1650px;
+    }
+    .car_model--block .container-fluid {
+        --containerWidth: 1650px;
+        padding-right: calc((100% - var(--containerWidth)) / 2);
+    }
+    .model__view--block .container-fluid {
+        --containerWidth: 1650px;
+        padding-left: calc((100% - var(--containerWidth)) / 2);
+    }
+}
+.ui-timepicker-container,
+.ui-datepicker {
+    z-index: 10 !important;
+}
+/* Header CSS */
+.header.header-2 {
+    position: relative;
+    background-color: var(--lightGreyColor1);
+}
+.mobile__menu {
+    display: none;
+}
+.inner-page {
+    background-color: rgba(4, 7, 39, 0.5);
+}
+.inner-page .header__main {
+    padding-bottom: 10px;
+}
+.inner-page.fixed-header .header__main {
+    padding: 0;
+}
+.header__top {
+    padding: 20px 0;
+}
+.header__top--links, .header__top ul {
+    align-items: center;
+}
+.header__top--logos li {
+    margin-right: 35px;
+}
+.header__top--social li {
+    margin-right: 30px;
+}
+.header__top--social li a {
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--social li a:hover {
+    box-shadow: 0 3px 0 0 #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li a img {
+    display: none;
+}
+.header__top--action li:not(:last-child) a {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #ED192D;
+}
+.header__top--social li a img {
+    transform: scale(1);
+    transition: all 0.6s ease-in-out;
+}
+.header__top--social li a:hover img {
+    transform: scale(0.9);
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.6s ease-in-out;
+}
+.header__top--action li a:hover {
+    color: #ffffff;
+    transition: all 0.6s ease-in-out;
+} 
+.mobile__items { display: none; }
+
+.header {
+    position: fixed!important;
+    /*background-color: #212531;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    transition: all 0.6s ease-in-out;
+}
+.fixed-header {
+    padding: 15px 0;
+    background-color: var(--lightGreyColor1);
+    box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease-in-out;
+}
+.fixed-header .header__top {
+    display: none;
+}
+.header .container-fluid {
+    padding: 0 100px;
+}
+.navbar-nav {
+    width: 100%;
+}
+.navbar-nav .nav-item {
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-item.header-search {
+    margin-left: auto;
+}
+.navbar-nav .nav-item .menu-arrow {
+    margin-left: 10px;
+    margin-top: -3px;
+}
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 80px;
+}
+.navbar-nav .nav-item .nav-link,
+.sub-menu-item a {
+    padding: 0;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item .nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item .nav-link:hover:after,
+.navbar-nav .nav-item.active .nav-link:after {
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.nav-sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    width: 250px;
+    height: auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.navbar-nav .nav-item:hover > .nav-sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.nav-sub-menu .sub-menu-item:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #FFFFFF;
+}
+.nav-sub-menu a:hover {
+    color: var(--secondaryColor);
+}
+.header-search .form-group .form-control {
+    background: rgba(255, 255, 255, 0.56);
+    border: 1px solid #A6A6A6;
+    border-radius: 100px;
+}
+.header-search .form-group .form-control::placeholder {
+    color: #ffffff;
+}
+.header-search .btn-search {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    left: auto;
+    bottom: auto;
+}
+.header-search .form-group .form-control:hover + .btn-search svg path,
+.header-search .form-group .form-control:focus + .btn-search svg path,
+.header-search .form-group .form-control:-internal-autofill-selected + .btn-search svg path {
+    fill: #000000;
+}
+
+.side-menu {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 100;
+}
+.side-menu-item {
+    position: absolute;
+    cursor: pointer;
+    width: 240px;
+    height: 40px;
+    right: -201px;
+    line-height: 0;
+    -webkit-transition: 400ms all linear;
+    transition: 400ms all linear;
+    line-height: 40px;
+    margin: 1px;
+    background-color: var(--secondaryColor);
+}
+.side-menu-item:nth-child(2) {
+    top: 51px;
+}
+.side-menu-item:nth-child(3) {
+    top: 102px;
+}
+.side-menu-item:nth-child(4) {
+    top: 153px;
+}
+.side-menu-item svg {
+    width: 40px;
+    height: 15px;
+}
+.side-menu-item svg[height="50"][width="50"] {
+    width: 40px;
+    height: 22px;
+    margin: auto;
+}
+.side-menu-item span {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 5px 0;
+    color: #ffffff;
+}
+.side-menu-item:hover {
+    right: -1px;
+    background-color: var(--secondaryColor);
+    text-decoration: none;
+}
+
+.whatsApp__fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    /*background-color: var(--secondaryColor);*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*box-shadow: rgba(0, 0, 0, 0.16) 0 2px 5px 0, rgba(0, 0, 0, 0.12) 0 2px 10px 0;*/
+    z-index: 100;
+}
+.whatsApp__fixed svg {
+    width: 28px;
+    height: 28px;
+}
+/* Header CSS */
+
+/* Banner CSS */
+.hero__banner--block { 
+    position: relative; 
+    z-index: 2;
+}
+.hero__banner--img {
+    padding-top: 47%;
+}
+.our-networks .hero__banner--img {
+    padding-top: 27%;
+}
+.epp__banner .hero__banner--img {
+    padding-top: 33%;
+}
+.swiper-pagination-bullet {
+    background-color: #C6C6C6;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #8B8B8B;
+}
+.moosa_connect--block .nav-link{
+    background:#28407e!important;
+}
+.nav-link.active{
+    background:#eb2e32!important;
+}
+.hero__banner--content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: auto;
+    bottom: auto;
+    width: 1000px;
+    z-index: 1;
+}
+.hero__banner--content h1 {
+    margin-bottom: 20px;
+}
+/* Banner CSS */
+
+/* Category CSS */
+.car__cetegory--block .container {
+    margin-top: -150px;
+    position: relative;
+    z-index: 2;
+}
+.car__cetegory--block .row {
+    overflow: hidden;
+}
+.car__cetegory--item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+.car__cetegory--item .car__cetegory--img {
+    padding-top: 115%;
+    border: 6px solid #ffffff;
+    border-radius: 10px;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--img img {
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item:hover .car__cetegory--img img {
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item:hover .car__cetegory--img {
+    border-color: transparent;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    padding: 10px; 
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name h4 {
+    line-height: normal;
+}
+.car__cetegory--item:hover .car__cetegory--name {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--name h5 img {
+    width: 16px;
+    margin-right: 5px;
+}
+.car__cetegory--item .car__cetegory--name,
+.car__cetegory--item .car__cetegory--name h2 {
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item .car__cetegory--name:hover h2 {
+    color: #ffffff !important;
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory--item span {
+    font-size: 12px;
+    margin-right: 5px;
+}
+.car__cetegory--item .circle__arrow img {
+    width: 14px;
+}
+.car__cetegory--btn .col-lg-6:nth-child(even) {
+    text-align: right;
+}
+.car__cetegory__btns a {
+    color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+}
+.circle__arrow:hover svg circle {
+    stroke: var(--secondaryColor);
+    transition: all 0.6s ease-in-out;
+}
+.car__cetegory__btns a:hover svg path {
+    fill: var(--secondaryColor) !important;
+    stroke: var(--secondaryColor) !important;
+}
+.car__cetegory__btns a:hover svg path + path {
+    stroke: #ffffff !important;
+}
+.car__cetegory__btns a:hover {
+    color: var(--secondaryColor);
+}
+/* Category CSS */
+.swiper-slide{
+    height: auto!important;
+    /*DISPLAY: flex!important;*/
+    BACKGROUND: #FFF!important;
+    border-radius: 20px!important;}
+/* About CSS */
+.about__marh--block {
+    padding: 170px 0;
+}
+.about__marh--block .row {
+    margin: 0 -50px;
+}
+.about__marh--block .row .col-lg-4 {
+    padding: 0 50px;
+}
+.about__marh--block .row .col-lg-4:not(:last-child) {
+    border-right: 1px solid rgba(227, 227, 227, 0.2);
+}
+.about__marh--col p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+/* About CSS */
+
+/* GMC Truck CSS */
+.gmc__truck--block {
+    padding: 160px 0;
+}
+.gmc__truck--block .row {
+    margin: 0 -40px;
+}
+.gmc__truck--block .row .col-lg-6 {
+    padding: 0 40px;
+}
+.gmc__truck--banner {
+    padding-top: 80%;
+    border-radius: 10px;
+}
+.gmc__truck--details h2 {
+    margin-bottom: 20px;
+}
+.gmc__truck--details p {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+.gmc__truck--details .btn:after {
+    background-color: #77787B;
+}
+/* GMC Truck CSS */
+
+/* Car Adventure CSS */
+.car__adventure--item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.car__adventure--item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90.12deg, #4A4A4A 32.6%, rgba(196, 196, 196, 0) 91.61%);
+    z-index: 1;
+}
+.car__adventure--details {
+    padding: 170px 0;
+    width: 500px;
+    position: relative;
+    z-index: 1;
+}
+.car__adventure--details h2 {
+    margin-bottom: 20px;
+}
+.car__adventure--details h4 {
+    margin-bottom: 30px;
+}
+.car__adventure--details p {
+    color: #ffffff;
+    font-size: 14px;
+}
+.car__adventure__slider .swiper-button {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.car__adventure__slider .swiper-button-next {
+    right: 80px;
+}
+.car__adventure__slider .swiper-button-prev {
+    left: 80px;
+}
+.car__adventure__slider .swiper-button:after {
+    font-size: 18px;
+    color: #ffffff;
+}
+/* Car Adventure CSS */
+
+/* CEO Block CSS */
+.ceo--block {
+    padding: 80px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.ceo--block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primaryColor);
+    opacity: 0.6;
+}
+.ceo__main {
+    position: relative;
+    padding: 50px 10px 0 50px;
+    background-color: #ffffff;
+}
+.ceo__main .ceo__details {
+    margin-top: 130px;
+}
+.ceo__image {
+    position: relative;
+    z-index: 1;
+}
+.ceo__image:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 115%;
+    height: 75%;
+    background-color: var(--lightGreyColor);
+    z-index: -1;
+    transform: skewX(-12deg);
+}
+/* CEO Block CSS */
+
+/* Our Stories CSS */
+.our__stories--block {
+    padding: 70px 0 70px 8vw;
+    position: relative;
+}
+.our__stories--block .main__title {
+    position: relative;
+    z-index: 1;
+    width: 38%;
+    margin-bottom: 70px;
+}
+.our__stories--block .main__title h2 {
+    margin-bottom: 25px;
+}
+.our__stories--item {
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+.our__stories--item .our__stories--images {
+    border-radius: 20px;
+    padding-top: 56%;
+}
+.our__stories--item .our__stories--images img {
+    transform: scale(1);
+    transition: all 0.6s ease-in-out;
+}
+.our__stories--item:hover .our__stories--images img {
+    transform: scale(1.2);
+    transition: all 0.6s ease-in-out;
+}
+.our__stories--item .our__stories--details {
+    padding: 25px 15px;
+}
+.our__stories--item .our__stories--details h4 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+.our__stories--item .our__stories--details a {
+    font-size: 18px;
+    color: var(--primaryColor);
+}
+.our__stories__slider {
+    padding-top: 0px;
+}
+.our__stories__slider .swiper-button {
+    background-color: #3271B8;
+    border-radius: 50%;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    right: 10%;
+    top: 0;
+    margin: 0;
+}
+.our__stories__slider .swiper-button.swiper-button-disabled {
+    background-color: #235185;
+}
+.our__stories__slider .swiper-button:after {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.our__stories__slider .swiper-button-prev {
+    left: auto;
+    right: 17%;
+}
+/* Our Stories CSS */
+.thankyou_section{padding:200px 0 50px;text-align:center;}
+.thankyou_section .part_text{padding:0 20px;}
+.thankyou_section .row{justify-content:center;}
+.thankyou_section img{width:50%;}
+/* Enquiry Page CSS */
+.inner-page + main {
+    margin-top: 122px;
+}
+.page__hero--banner {
+    padding: 15% 0;
+    background-color: #D9D9D9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page__hero--title {
+    position: relative;
+    z-index: 2;
+}
+.page__hero--title h1 {
+    padding-bottom: 10px;
+}
+.page__hero--title h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) skewX(-30deg);
+    width: 100px;
+    height: 8px;
+    background-color: #ffffff;
+}
+.page__hero--title h1:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 60px);
+    transform: translateX(-50%) skewX(-30deg);
+    width: 10px;
+    height: 8px;
+    background-color: var(--secondaryColor);
+}
+
+.enquiry--block {
+    padding: 220px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.enquiry--block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--lightGreyColor);
+    opacity: 0;
+}
+.page__title h2 {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ffffff;
+}
+.dark-line h2 {
+    border-color: var(--primaryColor);
+}
+.enquiry__form {
+    border-radius: 30px;
+    padding: 30px;
+}
+.download__link a {
+    color: #9D0000;
+    font-weight: 500;
+    text-decoration: underline !important;
+}
+/* Enquiry Page CSS */
+
+/* Moosa Connet Page CSS */
+.app__store li:not(:last-child) {
+    margin-right: 1rem;
+}
+.accordion .card-header {
+    position: relative;
+    cursor: pointer;
+}
+.accordion .card-header:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url('/web/20231228143145im_/https://frontend.moosagroup.com/public/images/minus.svg') no-repeat center / contain;
+}
+.accordion .card-header.collapsed:after {
+    background-image: url('/web/20231228143145im_/https://frontend.moosagroup.com/public/images/plus.svg');
+}
+.accordion .card-header h4 {
+    width: 80%;
+}
+
+.terms__conditions hr {
+    border-color: var(--primaryColor);
+}
+/* Moosa Connet Page CSS */
+
+/* EPP Page CSS */
+.shape__btn {
+    position: relative;
+    background-color: #B1B1B1;
+    color: var(--primaryColor);
+    transform: skewX(-19deg);
+    padding: 14px 50px;
+    font-weight: 600;
+    display: inline-block;
+}
+.shape__btn span {
+    transform: skewX(19deg);
+    display: inline-block;
+}
+.shape__btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 13px;
+    height: 100%;
+    background-color: #EB2E32;
+    transform: skewX(-16deg);
+}
+.shape__btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 52px 15px 0 0;
+    border-color: #B1B1B1 transparent transparent transparent;
+}
+/* EPP Page CSS */
+
+/* Rent A Car Page CSS */
+.rent_car--item h4 {
+    color: #FF8902;
+}
+.rent_car--item h6 {
+    color: #3A76E9;
+}
+.car__contact__detail p, .car__contact__detail a {
+    font-size: 15px;
+    color: var(--primaryColor);
+    line-height: normal;
+}
+.rent_car--block h3,
+.rent_car--block h3 a {
+    color: #FF8902;
+}
+/* Rent A Car Page CSS */
+
+/* Our Network Page CSS */
+.hero__banner--block .page__title {
+    position: absolute;
+    top: 38%;
+    left: 50px;
+    right: auto;
+    bottom: auto;
+}
+.our_network--block {
+    margin-top: -13%;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+}
+.our_network__box {
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    padding: 25px;
+}
+.our_network__list .form-group select.form-control {
+    background: #ffffff url(/web/20231228143145im_/https://frontend.moosagroup.com/public/images/down-arrow-dark.svg) no-repeat 95% center / 1rem;
+    border-color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.network__info {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+}
+.location__list  .row {
+    margin: 0 -5px;
+}
+.location__list .row > div {
+    padding: 0 5px;
+}
+.location__item {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    height: calc(100% - 10px);
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+.location__item .card-header {
+    background-color: var(--lightGreyColor);
+    padding: 0.7rem;
+    border-radius: 10px 10px 0 0;
+    margin-top: -2px;
+}
+.location__item .card-header h4 {
+    font-weight: 600;
+}
+.location__item .card-header h4 svg {
+    width: 18px;
+    margin-right: 8px;
+}
+.location__item .card-body {
+    padding: 0.7rem;
+}
+.location__item .card-body address {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    line-height: 1.4;
+}
+.location__item .card-body ul {
+    display: flex;
+    margin: 0 -3px 0;
+}
+.location__item .card-body ul li {
+    padding: 0 6px;
+}
+.location__item .card-body h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.location__item .card-body a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+}
+
+.tool__free a {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--lightGreyColor);
+}
+.tool__free a svg {
+    width: 45px;
+    margin-right: 5px;
+}
+.our_network__map iframe {
+    border-radius: 20px;
+}
+/* Our Network Page CSS */
+
+/* Car Model Page CSS */
+.car_model--block {
+    background-color: #181818;
+}
+.car__model__banner {
+    padding-top: 75%;
+}
+.car__model__banner img {
+    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+.car__modal__list {
+    padding: 30px 0;
+}
+.car__modal__list .nav-pills .nav-link {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #7B7B7B;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7B7B7B;
+}
+.car__modal__list .nav-pills .nav-link.active {
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
+.explore__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: -50px;
+    position: absolute;
+}
+.explore__link:hover {
+    color: var(--secondaryColor);
+}
+.nav-item-body {
+    display: none;
+    margin-bottom: 30px;
+    position: relative;
+}
+.nav-item-body .car__model__banner {
+    display: none;
+}
+.nav-link.active + .nav-item-body {
+    display: block;
+}
+.nav-item-body ul li:not(:last-child) {
+    margin-right: 30px;
+}
+.nav-item-body ul li a {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 8px;
+}
+.nav-item-body ul li a:hover {
+    color: var(--secondaryColor);
+    border-color: var(--secondaryColor);
+}
+.nav-item-body ul li svg {
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 5px;
+}
+.nav-item-body ul li a:hover svg circle {
+    stroke: var(--secondaryColor);
+}
+
+.model_enquiry--block {
+    padding: 230px 0 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.model_enquiry--block.overlay::before {
+    background: var(--lightGreyColor);
+    opacity: 0.7;
+}
+.model_enquiry--block .container {
+    position: relative;
+    z-index: 9;
+}
+/* Car Model Page CSS */
+
+/* Car Model Details Page CSS */
+.car_model__details .react-tabs__tab-list {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 0 0 30px;
+  display: flex;
+  overflow: auto;
+}
+
+.car_model__details .react-tabs__tab {
+    padding: 15px 20px;
+    line-height: normal;
+    position: static;
+    border-radius: 0;
+    flex: 1;
+    text-align: center; 
+    background-color: rgba(67, 67, 67, 0.1);
+}
+.car_model__details .react-tabs__tab--selected {
+    background: #EB2E32;
+    color: #ffffff;
+    border-color: #EB2E32 !important;
+}
+.car_model__details .react-tabs__tab:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+.model__view--block {
+    background-color: #181818;
+}
+.model__view__banner {
+    padding-top: 80%;
+}
+.model__view--sliderThumb {
+    padding: 50px 30px 50px 0;
+}
+.model__view--sliderThumb .swiper-wrapper {
+    flex-direction: column;
+}
+.model__view--sliderThumb .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+}
+.model__view--sliderThumb .swiper-slide:not(:last-child) .model__view--item {
+    border-bottom: 1px solid #7B7B7B;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+}
+.model__view--sliderThumb .model__view--item {
+    max-width: calc(100% / 2 - 24px);
+    flex: 0 0 calc(100% / 2 - 24px);
+    margin: 0 12px 24px;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.model__view--item h4 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 8px 5px 0;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.model__view--item.active h4, 
+.model__view--item:hover h4 {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-in-out;
+}
+.model__view--item.active h4, 
+.model__view--item h4:hover {
+    color: var(--secondaryColor);
+}
+.model__view--sliderThumb .model__view--image,
+.tab-pane .model__view__thumb .centered-img-wrapper {
+    padding-top: 100%;
+}
+.model__view--sliderThumb .model__view--item img,
+.tab-pane .model__view__thumb,
+.tab-pane .model__view__thumb .centered-img-wrapper img {
+    border-radius: 6px;
+}
+.modal__color__item {
+    position: relative;
+}
+.tab-pane .model__view__thumb {
+    cursor: pointer;
+}
+.modal__color__item .model__view__colorT {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+    width: 100%;
+}
+.modal__color__item .model__view__colorT .model__name {
+    font-size: 1rem;
+    padding: 5px 0 0;
+    line-height: normal;
+}
+.tab-pane .swiper-slide-thumb-active .model__view__thumb {
+    background-color: #181818 !important;
+}
+.modal__color__item .model__view__colorT .swiper-slide-thumb-active .model__name {
+    color: #ffffff !important;
+}
+.model__view--item h4 sup {
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+    font-weight: 700;
+}
+.model__view--item h4 sub {
+    font-size: 14px;
+    position: relative;
+    left: -5px;
+    top: 2px;
+}
+.model__view--item h4 svg {
+    margin-left: 3px;
+    width: 24px;
+    height: 24px;
+}
+.model__view--item h4 .circle_arrow {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+}
+.model__view--item h4 svg path[stroke] {
+    stroke: #000000;
+    transition: all 0.6s ease-in-out;
+}
+.swiper-slide-thumb-active .model__view--item h4 .circle_arrow path, 
+.model__view--item h4:hover .circle_arrow path {
+    fill: var(--secondaryColor) !important;
+    transition: all 0.6s ease-in-out;
+    stroke: #ffffff !important;
+}
+.model__view--sliderThumb .swiper-slide-thumb-active .model__view--item h4 {
+    color: #ffffff;
+}
+.model__view--sliderThumb .swiper-slide.swiper-slide-thumb-active .model__view--item {
+    border-color: #ffffff;
+}
+.model__view--block .swiper-button-prev,
+.model__view--block .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    top: auto;
+    bottom: 40px;
+}
+.model__view--block .swiper-button-next {
+    background: url('/web/20231228143145im_/https://frontend.moosagroup.com/public/images/circle-arrow.svg') no-repeat center / contain;
+}
+.model__view--block .swiper-button-prev {
+    background: url('/web/20231228143145im_/https://frontend.moosagroup.com/public/images/circle-arrow.svg') no-repeat center / contain;
+    transform: rotate(180deg);
+    left: auto;
+    right: 100px;
+}
+.model__view--block .swiper-button-next {
+    right: 30px;
+}
+.model__view--block .swiper-button-prev::after,
+.model__view--block .swiper-button-next::after {
+    display: none;
+}
+
+.car_model__details h4 {
+    color: #DF053A;
+}
+.car_model__details figure {
+    margin: 30px 0;
+}
+.car_model__details ol {
+    padding-left: 15px;
+}
+.car_model__details ol li {
+    text-transform: uppercase;
+}
+/* Car Model Details Page CSS */
+
+/* Blog Details Page CSS */
+.blog__details--block .blog__details {
+    width: 85%;
+    margin: 0 auto;
+}
+.about_us--block h4 {
+    color: #C7081B;
+}
+/* Blog Details Page CSS */
+
+/* About US Page CSS */
+.hero__banner_inner--block {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16% 0 4%;
+}
+.about_us--block .row {
+    margin-bottom: 3rem;
+}
+/* About US Page CSS */
+
+/* Maintenance Page CSS */
+.nav-tabs .nav-link {
+    background-color: var(--primaryColor);
+    color: #ffffff;
+    margin-right: 10px;
+    border-radius: 6px
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: var(--secondaryColor);
+    border-color: var(--secondaryColor);
+}
+.tab-pane .card-header a {
+    color: var(--primaryColor);
+}
+/* Maintenance Page CSS */
+
+/* Footer CSS */
+.footer .container-fluid .row {
+    justify-content: center;
+}
+.footer .container-fluid {
+    padding: 0 100px;
+    width: 90%;
+}
+.footer-wrapper {
+    padding: 50px 0;
+}
+.footer .footer-wrapper h4 {
+    margin-bottom: 25px;
+}
+.footer-widget ul li {
+    margin-bottom: 20px;
+}
+.footer-widget ul li a:hover {
+    text-decoration: underline !important;
+}
+.footer a, .footer p {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+}
+.social-icons {
+    align-items: center;
+    display: table-row !important;
+}
+.social-icons li {
+    margin-right: 15px;
+    margin-bottom: 0 !important;
+    display: table-cell;
+    padding: 0 5px 10px;
+}
+.social-icons li:first-child {
+    text-align: right;
+}
+.social-icons li a {
+    position: relative;
+    overflow: hidden;
+}
+.footer-widget ul li svg {
+    width: 22px;
+    position: relative;
+    z-index: 9;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.footer-widget ul li a:hover svg {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.social-icons li a:hover {
+    color: var(--secondaryColor);
+}
+.footer__copyright {
+    background-color: #ECECEC;
+    padding: 20px 0;
+}
+.footer__copyright p {
+    color: var(--primaryColor);
+    line-height: normal;
+}
+/* Footer CSS */
+
+
+/* year Progress start */
+.slider_section{background:#fff;}
+.swiper-container-wrapper--timeline .swiper-slide {background: #fff;padding:0 25px;min-height: 300px;align-items: center;justify-content: center;border-radius: 10px;}
+.swiper-container-wrapper--timeline .swiper-slide .container {padding: 0;width: 100%;}
+.swiper-container-wrapper--timeline .swiper-slide .title {font-size: 18px;opacity: 1;transition: 0.5s ease 0.5s;}
+.swiper-container-wrapper--timeline .swiper-slide-active .title {opacity: 1;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom {position: relative;padding: 50px 0;list-style: none;display: flex;justify-content: space-around;}
+.slider_section .container{margin-right:0;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch {position: relative;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title {position: absolute;font-weight: 400;left: 0;transition: 0.2s all ease-in-out;transition-delay: 0s;cursor: pointer;z-index: 1;color:#fff!important;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title:after {position: absolute;top: calc(100% + 19px);right: 50%;transform: translateX(50%) translateY(-50%);width: 12px;height: 12px;background: #fff;border-radius: 2rem;content: "";transition: 0.5s all ease-in-out;transition-delay: 0s;z-index: 1;} 
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title:before{position: absolute;content:"";top: calc(100% + 19px); width:85px;height: 2px;background: #fff; z-index: 1;left: 10px;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.last .switch-title:before{display:none}
+.slider_text{padding:90px 0}
+.slider_section .middel_border{position:absolute;top:42%;width:100%;margin:auto;z-index:9}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active .switch-title {font-weight: 400;transition-delay: 0.4s;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active .switch-title:after {background: #fff;width: 16px;height: 16px;border:3px solid #EB2E32;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active ~ .swiper-pagination-switch .switch-title {color: #fff;font-weight: 16px;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active ~ .swiper-pagination-switch .switch-title:after {background: #fff;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom{width:100%;}
+.swiper-container-wrapper--timeline .swiper-pagination-custom{justify-content:space-between;}
+.swiper-pagination-switch.first{margin-left:0!important}
+
+.swiper-pagination-switch{margin:0 30px 0 0;}
+.milestone_padding{
+    padding:14% 0 2%!important;
+}
+.hero__banner_inner--block .container{overflow:hidden}
+.slider_year{background:#fff;padding:30px 0;}
+.swiper-slide-active{padding-left:0!important}
+.slider_year .swiper-slide .slider_text .year{font-family: 'Overpass', sans-serif;font-weight: 600;font-size: 24px;line-height: 30px;display: flex;align-items: center;color: #EB2E32;}
+.slider_year .swiper-slide .slider_text  .slider_heading{font-family: 'Overpass', sans-serif;font-weight: 700;font-size:30px;line-height: 46px; display: flex;align-items: center;color: #000000;position:relative}
+.slider_year .swiper-slide .slider_text  p{font-family: 'Overpass', sans-serif;padding-top:40px;font-weight: 400;font-size: 16px;line-height: 22px; text-align: justify;color: #000000;margin:0}
+.slider_year .swiper-slide .slider_img{padding:90px 0}
+.slider_section{position:relative;}
+.slider_year .swiper-slide .slider_text  .slider_heading:after{content:"";position:absolute;left:0;bottom:-5px;border-radius:2px;height:5px;background:#EB2E32;width:100px;}
+.slider_text{position:relative}
+/* year Progress end */
+/* accolades_section start */
+.accolades_section{padding:100px 0;}
+.accolades_section .accolades_box{border-radius:20px;border:3px solid #212531;margin:10px 0;height:100%;overflow:hidden;}
+.accolades_section .accolades_box .part_img{text-align:center}
+.accolades_section .accolades_box .part_text{padding:5px 10px}
+.accolades_section .accolades_box .part_text h4{font-weight: 700;font-size:14px;line-height:20px;display: flex;align-items: center;color: #000000;padding-top:5px}
+.accolades_section .accolades_box .part_text p{font-size:12px;color:#040727;margin-bottom:0}
+.middel_border img{width:100%}
+ 
+
+.slider_section_padding_top .swiper-slide:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    
+} 
+.slider_section_padding_top.swiper-slide:nth-child(odd) .slider_img{
+     width:100%;
+    order:0;
+     
+ }
+
+ .slider_section_padding_top .swiper-slide:nth-child(even)  .slider_img{
+    margin-top:250px;
+ } 
+ .slider_section_padding_top .swiper, .slider_section_padding_top .swiper-container{
+    padding-bottom:270px;
+ }
+ .slider_section_padding_top .swiper-slide:nth-child(odd) .slider_text{
+     width:100%;
+     margin-top:150px;
+     order:1;
+ } 
+.slider_section_padding_top .slider_img{
+     height:350px;
+     width:100%;
+ }
+.slider_section_padding_top .slider_img {
+    height: 350px; 
+    width: 100%!important;
+    position: relative;
+}
+.slider_year .swiper-slide .slider_img img{
+   
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+    width: 100%;
+    left: 0;
+    z-index: 9999999;
+    right: 0;
+} 
+.slider_section  {
+    /*padding:100px 0;*/
+} 
+
+
+
+@media (max-width: 1800px) {
+    body {
+        font-size: 15px;
+    }
+    h1, .h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4, .h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .btn-lg {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    /* Header CSS */
+    .header .container-fluid {
+        padding: 0 50px;
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 40px;
+    }
+    /* Header CSS */
+
+    /* About CSS */
+    .about__marh--block {
+        padding: 90px 0;
+    }
+    .about__marh--block .row {
+        margin: 0 -30px;
+    }
+    .about__marh--block .row .col-md-4 {
+        padding: 0 30px;
+    }
+    /* About CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--block {
+        padding: 80px 0;
+    }
+    .gmc__truck--block .row {
+        margin: 0 -20px;
+    }
+    .gmc__truck--block .row .col-lg-6 {
+        padding: 0 20px;
+    }
+    .gmc__truck--details p {
+        margin-bottom: 20px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        padding: 100px 0;
+        width: 40%;
+    }
+    .car__adventure__slider .swiper-button-next {
+        right: 40px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 40px;
+    }
+    /* Car Adventure CSS */
+
+    /* CEO Block CSS */
+    .ceo__main .ceo__details {
+        margin-top: 60px;
+    }
+    /* CEO Block CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 70px 0 70px 10vw;
+    }
+    .our__stories--block .main__title {
+        width: 60%;
+        margin-bottom: 50px;
+    }
+    .our__stories--block .main__title h2 {
+        margin-bottom: 15px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .enquiry__banner {
+        padding-top: 75%;
+    }
+    /* Enquiry Page CSS */
+
+    /* Car Model Page CSS */
+    .car__model__banner {
+        padding-top: 100%;
+    }
+    /* Car Model Page CSS */
+
+    /* Footer CSS */
+    .footer .container-fluid {
+        padding: 0 50px;
+        width: 80%;
+    }
+    .footer .footer-wrapper h4 {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .footer-widget ul li {
+        margin-bottom: 10px;
+    }
+    .footer-widget li a, .footer-widget p, .footer-widget li {
+        font-size: 12px;
+    }
+    .footer-widget li a {
+        word-break: break-word;
+    }
+    .social-icons li {
+        margin-right: 13px;
+    }
+    .social-icons li a {
+        width: 25px;
+        height: 25px;
+    }
+    .social-icons li a img {
+        width: 15px;
+    }
+    .footer__copyright {
+        padding: 10px 0;
+    }
+    .footer__copyright p {
+        font-size: 12px;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 1280px) {
+    h1, .h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+
+    /* Header CSS */
+    .header .container-fluid {
+        padding: 0 20px;
+    }
+    .header__top--logos li {
+        margin-right: 25px;
+    }
+    .header__top--social li {
+        margin-right: 15px;
+    }
+    /* Header CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--block .row {
+        margin: 0 -15px;
+    }
+    .gmc__truck--block .row .col-lg-6 {
+        padding: 0 15px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure__slider .swiper-button-next {
+        right: 15px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 15px;
+    }
+    /* Car Adventure CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 70px 0 70px 30px;
+    }
+    /* Our Stories CSS */
+
+    /* Footer CSS */
+    .social-icons {
+        justify-content: flex-start !important;
+    }
+    .social-icons li:first-child {
+        width: 50px;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 1199px) {
+    /* Header CSS */
+    .header__top {
+        background-color: rgba(53, 53, 53, 0.7);
+    }
+    .header__top .row {
+        align-items: center;
+    }
+    .inner-page .header__main {
+        padding-bottom: 0;
+    }
+    .fixed-header {
+        padding: 10px 0;
+    }
+    .header__top .header__top--logos, .header__top .header__top--social {
+        display: none !important;
+    }
+    .header__top .header__top--action {
+        padding: 5px 50px 0 0;
+    }
+    .header__top .header__top--action span {
+        font-size: 0;
+    }
+    .header__top--action li a img {
+        display: inline-block;
+    }
+    .header__top--action li img {
+        width: 20px;
+        height: 20px;
+    }
+    .header__top--logos li {
+        align-items: center;
+    }
+    .mobile__items, .header__top--action img { display: inline-block; }
+    .fixed-header {
+        background-color: #ffffff;
+    }
+    .fixed-header {
+        padding: 0;
+    }
+    .fixed-header .header__top {
+        display: block;
+        padding: 5px 0;
+    }
+    .mobile__menu {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        left: auto;
+        bottom: auto;
+        cursor: pointer;
+        z-index: 99;
+    }
+    .mobile__menu .mobile__line {
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        width: 30px;
+        height: 2px;
+        position: relative;
+    }
+    .mobile__menu .mobile__line:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .mobile__menu.show .mobile__line:nth-child(2) {
+        transform: rotate(-45deg);
+        top: -4px;
+    }
+    .mobile__menu.show .mobile__line:first-child {
+        transform: rotate(45deg);
+        top: 3px;
+    }
+    .mobile__menu.show .mobile__line:last-child {
+        display: none;
+    }
+    .header__main .navbar {
+        display: none;
+    }
+    .header__main .navbar.show {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: calc(100vh - 110px);
+        overflow: auto;
+        background-color: var(--primaryColor);
+        padding: 20px !important;
+        z-index: 9;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+        display: block;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: #ffffff;
+        width: 80%;
+    }
+    .navbar-nav .nav-item.header-search {
+        margin-left: 0;
+        width: 100%;
+        display: block;
+    }
+    .nav-sub-menu {
+        position: static;
+        width: 100%;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0 0;
+    }
+    .navbar-nav .nav-item .menu-arrow {
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Header CSS */
+
+    /* Banner CSS */
+    .hero__banner--content {
+        width: 80%;
+    }
+    /* Banner CSS */
+
+    /* About CSS */
+    .about__marh--block, .gmc__truck--block, .car__adventure--details {
+        padding: 50px 0;
+    }
+    .about__marh--col p {
+        margin-bottom: 20px;
+    }
+    /* About CSS */
+
+    /* CEO Block CSS */
+    .ceo--block {
+        padding: 70px 0 50px;
+    }
+    /* CEO Block CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block {
+        padding: 50px 15px;
+    }
+    .ceo__main .ceo__details {
+        margin-top: 30px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .inner-page + main {
+        margin-top: 75px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Rent A Car Page CSS */
+    .car__contact__detail p, .car__contact__detail a {
+        font-size: 14px;
+    }
+    /* Rent A Car Page CSS */
+
+    /* Car Model Page CSS */
+    .car__model__banner {
+        padding-top: 150%;
+    }
+    .nav-item-body ul li:not(:last-child) {
+        margin-right: 25px;
+    }
+    /* Car Model Page CSS */
+
+    /* Category CSS */
+    .car__cetegory--item .car__cetegory--name {
+	    opacity: 1;
+	    visibility: visible;
+	    position: static;
+	}
+	.car__cetegory--item .car__cetegory--img {
+    	border: none;
+    	border-radius: 0;
+	}
+	.car__cetegory--item:hover .car__cetegory--img img {
+    	transform: none;
+	}
+	.car__cetegory--btn .col-lg-6:not(:last-child) {
+    	margin-bottom: 6px;
+	}
+	.car__cetegory--btn .col-lg-6:nth-child(even) {
+    	text-align: left;
+	}
+    /* Category CSS */
+}
+@media (max-width: 991px) {
+    /* Banner CSS */
+    .our-networks .hero__banner--img {
+        padding-top: 30%;
+    }
+    /* Banner CSS */
+
+    /* Category CSS */
+    .car__cetegory--block .container {
+        margin-top: -50px;
+    }
+    /* Category CSS */
+
+    /* About CSS */
+    .about__marh--block .row {
+        margin: 0 -15px;
+    }
+    .about__marh--block .row .col-lg-4 {
+        padding: 0 15px;
+    }
+    .about__marh--block .row .col-lg-4:not(:last-child) {
+        border: none;
+        margin-bottom: 50px;
+    }
+    /* About CSS */
+
+    /* GMC Truck CSS */
+    .gmc__truck--details {
+        margin-top: 30px;
+    }
+    /* GMC Truck CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        width: 60%;
+    }
+    /* Car Adventure CSS */
+
+    /* CEO Block CSS */
+    .ceo__main {
+        padding: 30px;
+    }
+    .ceo--block .col-lg-4 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .ceo__image {
+        z-index: 1;
+        margin-top: 10px;
+    }
+    /* CEO Block CSS */
+
+    /* Enquiry Page CSS */
+     .inner-page + main {
+        margin-top: 66px;
+    }
+    .enquiry--block .col-md-12:first-child {
+        order: 1;
+    }
+    .enquiry__info {
+        margin-top: 30px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Car Model Page CSS */
+    .car_model--block .container-fluid {
+        padding: 0 15px !important;
+    }
+    .car__model__banner {
+        padding-top: 0;
+        margin: 0;
+        display: none;
+    }
+    .car__model__banner img {
+        clip-path: none;
+        position: static;
+    }
+    .nav-item-body .car__model__banner {
+        display: block;
+    }
+    /* Car Model Page CSS */
+
+    /* Our Network Page CSS */
+    .our_network__list {
+        margin-bottom: 30px;
+    }
+    .tool__free.mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+    /* Our Network Page CSS */
+
+    /* Car Model Details Page CSS */
+    .model__view--block .container-fluid {
+        padding-right: 15px !important;
+    }
+    .model__view--sliderThumb {
+        padding: 30px 0;
+    }
+    .model__view--slider {
+        margin: 0 -15px;
+    }
+    .model__view--slider .model__view__banner {
+        padding-top: 60%;
+    }
+    .model__view--block .swiper-button {
+        width: 25px;
+        height: 25px;
+    }
+    .model__view--block .swiper-button-next {
+        right: 15px;
+    }
+    .model__view--block .swiper-button-prev {
+        right: 55px;
+    }
+    .model__view--block .col-lg-5 {
+        order: 1;
+    }
+    .model__view--block .model__view {
+        margin: 0 -15px;
+    }
+    .model__view--sliderThumb .model__view--item {
+        max-width: calc(100% / 4 - 10px);
+        flex: 0 0 calc(100% / 4 - 10px);
+        margin: 0 5px 10px;
+        border-width: 2px;
+    }
+    .model__view--item h4 {
+        font-size: 14px;
+    }
+    .car_model__details .react-tabs__tab {
+        flex: 0 0 250px;
+    }
+    /* Car Model Details Page CSS */
+
+    /* Moosa Connet Page CSS */
+    .moosa_connect__banner {
+        margin-top: 30px;
+        text-align: center;
+    }
+    /* Moosa Connet Page CSS */
+
+    /* EPP Page CSS */
+    .epp__website li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    /* EPP Page CSS */
+
+    /* Footer CSS */
+    .footer .container-fluid {
+        width: 100%;
+    }
+     .responsive_wrapper{
+        padding-top: 60%;
+    }
+    .enquiry__form {
+        padding-top:100px;
+        
+    }
+    .responsive_wrapper .responsive_img{
+        height:auto;
+    }
+    .enquiry__form.mt{
+        margin-top:80px;
+        padding-top: 40px;
+        margin-bottom:40px;
+    }
+    .enquiry_shop{
+        margin-top:80px;
+    }
+    .enquiry_shop .enquiry__form{
+        padding-top: 50px;
+        margin-bottom:50px;
+    }
+    /* Footer CSS */
+}
+@media (max-width: 767px) {
+    main{
+        margin-top: 80px;
+    }
+    html {
+        font-size: 14px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.4;
+    }
+    h1, .h1 {
+        font-size: 30px;
+    }
+    h1, h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        margin-left: 8px
+    }
+    .btn-lg {
+        padding: 10px 30px;
+    }
+
+    h4.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Header CSS */
+    .logo img {
+        width: auto;
+    }
+    .header .container-fluid {
+        padding: 0 15px;
+    }
+    .header__top {
+        padding: 10px 0;
+    }
+    .header__top .col-md-4 {
+        max-width: 30%;
+        flex: 0 0 30%;
+    }
+    .header__top .col-md-8 {
+        max-width: 70%;
+        flex: 0 0 70%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header__top .header__top--action {
+        padding: 0 50px 0 0;
+    }
+    .header__call svg {
+        width: 20px;
+        height: 20px;
+    }
+    /* Header CSS */
+
+    /* Banner CSS */
+ 
+    .hero__banner--content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .car_model__details{
+        width:100%;
+    } 
+    .model__view__banner.show#model-4{
+        padding-top:0;
+        height:850px!important;
+    }
+    .model__view__banner.show#model-4 .centered-img{
+        position:relative;
+        height:100%;
+    }
+    /* Banner CSS */
+
+    /* Category CSS */
+    .car__cetegory--block .col-md-4 {
+        margin-bottom: 15px;
+    }
+    /* Category CSS */
+
+    /* Car Adventure CSS */
+    .car__adventure--details {
+        padding: 50px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .car__adventure--details h2 {
+        font-size: 30px;
+    }
+    .car__adventure--details h4 {
+        font-size: 16px;
+    }
+    .car__adventure__slider .swiper-button {
+        width: 25px;
+        height: 25px;
+    }
+    .car__adventure__slider .swiper-button:after {
+        font-size: 13px;
+    }
+    .car__adventure__slider .swiper-button-next {
+        right: 10px;
+    }
+    .car__adventure__slider .swiper-button-prev {
+        left: 10px;
+    }
+    /* Car Adventure CSS */
+
+    /* CEO Block CSS */
+    .ceo__main {
+        padding: 20px;
+        margin: 0;
+    }
+    .ceo--block .col-lg-4 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+    .ceo__main::before {
+        transform: none;
+        left: 15px;
+        right: 15px;
+    }
+    /* CEO Block CSS */
+
+    /* Our Stories CSS */
+    .our__stories--block .main__title {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /* Our Stories CSS */
+
+    /* Enquiry Page CSS */
+    .page__title h2:after {
+        border-width: 37px 15px 0 0;
+    }
+    .inner-page + main {
+        margin-top: 71px;
+    }
+    .enquiry--block {
+        padding: 40px 0;
+    }
+    .form-group .form-control {
+        font-size: 14px;
+    }
+    .form-group select.form-control {
+        background-size: 14px;
+    }
+    /* Enquiry Page CSS */
+
+    /* Rent A Car Page CSS */
+    .rent_car--item {
+        margin-bottom: 30px;
+    }
+    .rent__car__logo img {
+        width: 150px;
+    }
+    .car__contact__detail p {
+        flex-direction: column;
+    }
+    .car__contact__detail a:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .rent_car--block h3, .rent_car--block h3 a {
+        font-size: 1.4rem !important;
+    }
+    /* Rent A Car Page CSS */
+
+    /* Car Model Page CSS */
+    .model_enquiry--block {
+        padding: 100px 0 50px;
+    }
+    .car__modal__list .nav-pills .nav-link {
+        font-size: 16px;
+    }
+    .explore__link {
+        font-size: 12px;
+    }
+    .nav-item-body ul {
+        flex-wrap: wrap;
+    }
+    .nav-item-body ul li {
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .nav-item-body ul li:not(:last-child) {
+        margin-right: 10px;
+    }
+    .nav-item-body ul li a {
+        font-size: 11px;
+    }
+    .nav-item-body ul li svg {
+        width: 12px;
+        height: 12px;
+        margin-left: 2px;
+    }
+    /* Car Model Page CSS */
+    
+    /* Car Model Details Page CSS */
+    .model__view--sliderThumb {
+        padding: 15px 0 5px;
+        flex-wrap: nowrap;
+        margin: 0 -5px;
+        overflow: auto;
+    }
+    .model__view--sliderThumb .model__view--item {
+        max-width: calc(100% / 3.1 - 10px);
+        flex: 0 0 calc(100% / 3.1 - 10px);
+        border-radius: 6px;
+    }
+    .model__view--item h4 {
+        font-size: 11px;
+        padding: 5px 8px 0;
+    }
+    .model__view--item h4 svg {
+        display: none;
+    }
+    .model__view--item h4 sup {
+        font-size: 5px;
+        top: -7px;
+        left: -4px;
+    }
+    /* Car Model Details Page CSS */
+
+    /* Our Network Page CSS */
+    .hero__banner--block .page__title {
+        top: 20%;
+        left: 15px;
+    }
+    .our_network--block {
+        margin: 20px 0 50px;
+    }
+    .hero__banner--block .page__title h2 {
+        padding: 0 0 8px;
+    }
+    .model__view__banner  .centered-img{
+        height:auto;
+        width:100%;
+    }
+    .location__item {
+        border-width: 1px;
+        height: auto;
+    }
+    .location__item .card-header {
+        margin-top: -1px;
+    }
+    .car__cetegory--block h4{
+        padding-top:30px;
+    }
+    /* Our Network Page CSS */
+
+    /* Our Stories CSS */
+    .our__stories__slider {
+        padding-top: 50px;
+    }
+    .our__stories__slider .swiper-button {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+    }
+    .our__stories__slider .swiper-button-prev {
+        right: 22%;
+    }
+    .our__stories__slider .swiper-button:after {
+        font-size: 12px;
+    }
+    /* Our Stories CSS */
+
+    /* EPP Page CSS */
+    .shape__btn {
+        padding: 10px 20px;
+        white-space: break-spaces;
+        word-break: break-word;
+        transform: none;
+    }
+    .shape__btn span {
+        transform: none;
+    }
+    .shape__btn::before, .shape__btn::after {
+        display: none;
+    }
+    /* EPP Page CSS */
+
+    /* Blog Details Page CSS */
+    .blog__details--block .blog__details {
+        width: 100%;
+    }
+    /* Blog Details Page CSS */
+
+    /* About US Page CSS */
+    .hero__banner_inner--block {
+        background-position: 80% center;
+        padding: 50% 0 12%;
+    }
+    .about_us--block .row > div:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    /* About US Page CSS */
+
+    /* Footer CSS */
+    .footer-wrapper {
+        padding: 40px 0 0;
+    }
+    .footer .container-fluid {
+        padding: 0 15px;
+    }
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    .footer .col-lg-2:last-child {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .footer__logo {
+        margin-bottom: 20px !important;
+    }
+    .footer .footer-wrapper h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .footer-widget ul li {
+        margin-bottom: 5px;
+    }
+    .footer-widget li a, .footer-widget p, .footer-widget li {
+        font-size: 11px;
+    }
+    .slider_section .container{height:100%!important;padding-right: 15px!important;
+    padding-left: 15px!important;
+    margin-right: auto!important;
+    margin-left: auto!important;}
+    /* Footer CSS */
+    .responsive_wrapper{
+        padding-top: 60%;
+    }
+    .enquiry__form {
+        padding-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    }
+    .responsive_wrapper .responsive_img{
+        height:auto;
+    }
+    .enquiry__form.mt{
+        margin-top:80px;
+        padding-top: 40px;
+        margin-bottom:40px;
+    }
+    .enquiry_shop{
+        margin-top:80px;
+    }
+    .enquiry_shop .enquiry__form{
+        padding-top: 50px;
+        margin-bottom:50px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+    .header__main .navbar.show {
+        height: calc(100vh - 70px);
+        overflow: auto;
+    }
+    .slider_year .swiper-slide .slider_text .slider_heading{font-size:28px;}
+    .slider_year .swiper-slide .slider_img{padding:50px 0}
+    .slider_section .top_round , .slider_section .bottom_round , .slider_section .border{display:none}
+    .swiper-container-wrapper--timeline .swiper-pagination-custom{width:100%;overflow:scroll}
+    .swiper-pagination-switch{margin:0 30px;}
+    .swiper-container-wrapper--timeline .swiper-pagination-custom{padding:40px 0 75px 0}
+    .swiper-container-wrapper--timeline .swiper-pagination-custom{ margin-left: 0!important;}
+    .slider_year .swiper-slide .slider_img{padding:20px 0!important;}
+    .swiper-container-wrapper--timeline .swiper-pagination-custom{justify-content:flex-start!important;}
+}
+
+@media (min-width:992px) and (max-width:1199px){
+	.our-networks .hero__banner--img {padding-top: 30%;}
+	.hero__banner--block .page__title{top:35%}
+	.slider_section .container{max-width:1010px}
+    .slider_section .middel_border{top:50%}
+    
+}
+
+
+@media (min-width:1200px) and (max-width:1920px){
+    .hero__banner--block .page__title{top:43%!important}
+	.our-networks .hero__banner--img {padding-top: 35%!important;}
+	.slider_section .middel_border{top: 38%;}
+    .slider_section .middel_border img{width:100%}
+}
+
+
+@media (min-width:1200px) and (max-width:1399px){
+    .slider_section .container{max-width:1200px}
+}
+@media (min-width:1400px) and (max-width:1919px){
+    .slider_section .container{max-width:1300px}
+
+}
+
+@media (min-width:1919px) and (max-width:2200px){
+    .swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title:before{width:90px;}
+    .slider_section .container{max-width:1800px!important}
+    .slider_section .middel_border{ top: 35%;}
+    .slider_section .middel_border img{width:100%}
+}
+/*
+     FILE ARCHIVED ON 14:31:45 Dec 28, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:34:57 Mar 27, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots: 0.231
+  exclusion.robots.policy: 0.214
+  cdx.remote: 0.145
+  esindex: 0.017
+  LoadShardBlock: 286.198 (6)
+  PetaboxLoader3.datanode: 196.358 (8)
+  load_resource: 164.358
+  PetaboxLoader3.resolve: 65.499
+  loaddict: 56.906
+*/

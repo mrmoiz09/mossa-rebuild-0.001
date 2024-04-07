@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b83ed26.css",
+    "main.js": "/static/js/main.0cb52e93.js",
+    "static/media/gmcbannervideo.mp4": "/static/media/gmcbannervideo.7a1d3932cd9aeca908ec.mp4",
+    "static/media/aboutceo.jpg": "/static/media/aboutceo.9db27f3da97a0cf386ce.jpg",
+    "static/media/aboutelectricity.jpg": "/static/media/aboutelectricity.005ac598d32c07bd41cd.jpg",
+    "static/media/aboutagriculture.jpg": "/static/media/aboutagriculture.9fa3d328db88f2e1cdaf.jpg",
+    "static/media/aboutpostalservices.jpg": "/static/media/aboutpostalservices.c0f6a5aa4e16187b5a19.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.f9012fd97d589d5ff26ac76259302a25.svg",
+    "static/media/aboutbusiness.jpg": "/static/media/aboutbusiness.108b54d50d71aefd3f4a.jpg",
+    "static/media/aboutconstruction.jpg": "/static/media/aboutconstruction.1f7cbd53e52bd882960d.jpg",
+    "static/media/aboutbanking.jpg": "/static/media/aboutbanking.2c9463a7c2509c9225d3.jpg",
+    "static/media/aboutfinance.jpg": "/static/media/aboutfinance.276101607b260277b958.jpg",
+    "static/media/aboutherobanner.jpg": "/static/media/aboutherobanner.1f432269b06b444cc8cc.jpg",
+    "index.html": "/index.html",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.66d0549860b00eeca1659d30c7033a6e.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/service.svg": "/static/media/service.fa785c6ca7ef7957b698a3c809c81271.svg",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/facebook.svg": "/static/media/facebook.15d6e4fe443c005c25780c0107f45624.svg",
+    "static/media/searchicon.svg": "/static/media/searchicon.41734cfe67b2e0cb6d3adbc48efaa43e.svg",
+    "static/media/location.svg": "/static/media/location.479641e61617c00af06af92d504b67d0.svg",
+    "static/media/download.svg": "/static/media/download.fbd1213b1ffeec0b011d1c50ef0ba05c.svg",
+    "static/media/car.svg": "/static/media/car.9f2b794bb2fe88dbcfbcfd1aaae5d791.svg",
+    "static/media/downarrow.svg": "/static/media/downarrow.fa0331bba8d9ebc4def318782a637d61.svg",
+    "main.4b83ed26.css.map": "/static/css/main.4b83ed26.css.map",
+    "main.0cb52e93.js.map": "/static/js/main.0cb52e93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b83ed26.css",
+    "static/js/main.0cb52e93.js"
+  ]
+}
