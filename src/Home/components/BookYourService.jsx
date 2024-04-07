@@ -5,10 +5,9 @@ import { urls } from '../../config/constants';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { CommonApi, HomeApi } from '../../config/api';
-import { defaultHeader, toastError, toastSuccess } from '../../services/CommonFunction';
+import { CommonApi} from '../../config/api';
+import { defaultHeader} from '../../services/CommonFunction';
 import { callApi } from '../../services/ApiService';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
 import MoveCursorToTop from '../../services/MoveCursorToTop';
 import BookYourServiceForm from '../../HomeAR/components/Forms/BookYourServiceForm';
 
@@ -57,7 +56,7 @@ const BookYourService = () => {
     image2svg();
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [fetchData, fetchData1]);
 
   const settings = {
     dots: true,

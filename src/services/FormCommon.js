@@ -1,4 +1,3 @@
-import date from 'date-and-time';
 import classNames from "classnames"
 import moment from 'moment';
 import { todayDate } from './DateAndTime';

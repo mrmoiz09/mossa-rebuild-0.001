@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, memo } from 'react'
-import OurNetworkForm from './Forms/OurNetworkForm'
+import React, { useState, useEffect, useCallback } from 'react'
 import { urls } from '../../config/constants'
 import { image2svg } from '../../utilsfunctions/Svg';
 import Iframe from 'react-iframe'
@@ -9,8 +8,7 @@ import { CommonApi } from '../../config/api';
 import { defaultHeader, toastError, validateJsonString } from '../../services/CommonFunction';
 import { callApi } from '../../services/ApiService';
 import MoveCursorToTop from '../../services/MoveCursorToTop';
-import ReactMapboxGl, { Layer, Feature, Popup, Marker } from "react-mapbox-gl";
-import mapboxgl from 'mapbox-gl';
+import ReactMapboxGl, { Laye, Popup, Marker } from "react-mapbox-gl";
 import 'mapbox-gl/dist/mapbox-gl.css';
 const OurNetwork = () => {
 
@@ -67,16 +65,16 @@ const OurNetwork = () => {
   const [showIbri, toggleIbri] = React.useState(false);
   const [showNizwa, toggleNizwa] = React.useState(false);
   const [showSalah1, toggleSalah1] = React.useState(false);
-  const [showSalah2, toggleSalah2] = React.useState(false);
+  // const [showSalah2, toggleSalah2] = React.useState(false);
   const [showSohar, toggleSohar] = React.useState(false);
   const [showSur, toggleSur] = React.useState(false);
   const [showMabela, toggleMabela] = React.useState(false);
-  const [showWadi, toggleWadi] = React.useState(false);
+  // const [showWadi, toggleWadi] = React.useState(false);
   return (
     <>
       <section className="hero__banner--block">
         <div className="hero__banner--img centered-img-wrapper" data-aos="fade-down" data-aos-duration="1300">
-          <img className="lazy-load centered-img" src={`${urls.frontendUrl}/images/out-netwrok-banner.jpg`} width="1920" height="1172" alt="Hero Banner" />
+          <img className="lazy-load centered-img" src={`${urls.frontendUrl}/images/out-netwrok-banner.jpg`} width="1920" height="1172" alt="" />
         </div>
         <div className="page__title">
           <h2 className="h6 text-uppercase text-white mb-0">Our Network</h2>
@@ -425,6 +423,7 @@ const OurNetwork = () => {
                             onClick={() => toggleGhubra(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
                           />
                         </Marker>
 
@@ -437,6 +436,8 @@ const OurNetwork = () => {
                             onClick={() => toggleWataya(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
+
                           />
                         </Marker>
 
@@ -449,6 +450,8 @@ const OurNetwork = () => {
                             onClick={() => toggleIbri(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
+
                           />
                         </Marker>
 
@@ -485,6 +488,8 @@ const OurNetwork = () => {
                             onClick={() => toggleSohar(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
+
                           />
                         </Marker>
 
@@ -497,6 +502,8 @@ const OurNetwork = () => {
                             onClick={() => toggleSur(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
+
                           />
                         </Marker>
 
@@ -509,6 +516,8 @@ const OurNetwork = () => {
                             onClick={() => toggleMabela(true)}
                             style={{ height: 24, width: 24 }}
                             src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+                            alt=''
+
                           />
                         </Marker>
 

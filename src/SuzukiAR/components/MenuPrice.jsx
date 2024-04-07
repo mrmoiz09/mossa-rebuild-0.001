@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import { image2svg } from '../../utilsfunctions/Svg';
-import { urls } from '../../config/constants';
 
 const MenuPrice = () => {
 
@@ -21,10 +20,10 @@ const MenuPrice = () => {
             </div>
                 <div className="row">
                     <div className="col-md-6">
-                        <img style={{width:"100%"}} src="https://frontend.moosagroup.com/public/images/menuprice1.jpg" />
+                        <img style={{width:"100%"}} src="https://frontend.moosagroup.com/public/images/menuprice1.jpg" alt='' />
                     </div>
                     <div className="col-md-6">
-                        <img style={{width:"100%"}} src="https://frontend.moosagroup.com/public/images/menuprice2.jpg" />
+                        <img style={{width:"100%"}} src="https://frontend.moosagroup.com/public/images/menuprice2.jpg" alt='' />
                     </div>
                 </div>    
             </div>

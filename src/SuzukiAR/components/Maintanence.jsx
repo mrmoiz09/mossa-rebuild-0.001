@@ -1,5 +1,4 @@
 import React from 'react'
-import { urls } from '../../config/constants'
 
 const Maintanence = () => {
   return (

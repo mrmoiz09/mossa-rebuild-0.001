@@ -55,7 +55,7 @@ const DownloadBrochures = () => {
     image2svg();
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [fetchData,fetchData1]);
 
   const settings = {
     dots: true,

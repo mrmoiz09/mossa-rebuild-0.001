@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './components/Home'
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import {BrowserRouter as Routes,Route} from "react-router-dom"
 import { commonRoutes, HomeRoutes, testRoute } from '../config/RouteConfig'
 import Wrapper from './containers/Wrapper'
 import ContactUs from './components/ContactUs'
@@ -23,7 +23,6 @@ import BmEpp from './components/BmEpp'
 import MoosaConnect from './components/MoosaConnect'
 import Aboutus from './components/Aboutus'
 import History from './components/History'
-import Company from './components/Company'
 import Owners from './components/Owners'
 import Blogs from './components/Blogs'
 import Download from './components/Download'

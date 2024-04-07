@@ -1,10 +1,10 @@
 import BodyShopForm from './Forms/BodyShopForm'
-import React, { useState, useEffect, useCallback, memo } from 'react'
-import { CommonApi, HomeApi } from '../../config/api';
-import { defaultHeader, toastError, toastSuccess } from '../../services/CommonFunction';
+import React, { useState, useEffect, useCallback,  } from 'react'
+import { CommonApi, } from '../../config/api';
+import { defaultHeader } from '../../services/CommonFunction';
 import { urls } from '../../config/constants';
 import { callApi } from '../../services/ApiService';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
+// import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
 import MoveCursorToTop from '../../services/MoveCursorToTop'
 
 const BodyShop = () => {
@@ -15,17 +15,17 @@ const BodyShop = () => {
     const fetchData = useCallback(async ()=>{
     await callApi(CommonApi.getSettings.method,CommonApi.getSettings.url,null,null,defaultHeader()).then((res) => {
     if (!res?.data?.error) {
-      const arr = [];
+      // const arr = [];
            const payload = res?.data?.data;
            if(Array.isArray(payload) && payload?.length>0){
               
               for(let p of payload)
                 {
-                    if(p?.key_name=='body-shop'){
+                    if(p?.key_name==='body-shop'){
                         setData(p?.key_value);
                         console.log(p?.key_value);
                     }
-                    if(p?.key_name=='body-shop-content'){
+                    if(p?.key_name==='body-shop-content'){
                         setData2(p?.key_value);
                         console.log(p?.key_value);
                     }
@@ -43,7 +43,7 @@ const BodyShop = () => {
   useEffect(() => {
       fetchData();
     
-  }, []);
+  }, [fetchData]);
   return (
        <section className="enquiry--block enquiry_shop" style={{ backgroundImage: `url(${urls.dir_url}/${data})` }}>
         <div className="container">

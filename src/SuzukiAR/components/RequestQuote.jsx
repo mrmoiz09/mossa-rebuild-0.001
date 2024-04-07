@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import RequestQuoteForm from './Forms/RequestQuoteForm'
 import { urls } from '../../config/constants'
 import MoveCursorToTop from '../../services/MoveCursorToTop'

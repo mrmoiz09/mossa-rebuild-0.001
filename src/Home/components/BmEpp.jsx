@@ -8,8 +8,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { CommonApi } from '../../config/api';
 import { callApi } from '../../services/ApiService';
 import { defaultHeader } from '../../services/CommonFunction';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
-import MoveCursorToTop from '../../services/MoveCursorToTop';
+// import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
+// import MoveCursorToTop from '../../services/MoveCursorToTop';
 
 const BmEpp = () => {
   const [data, setData] = useState([]);
@@ -60,7 +60,7 @@ const BmEpp = () => {
     image2svg();
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [fetchData, fetchData1]);
 
   const settings = {
     dots: true,

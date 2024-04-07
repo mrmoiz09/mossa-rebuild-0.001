@@ -8,7 +8,7 @@ import { phonePattern } from '../../../services/Patterns';
 import { validationMsg } from '../../../config/constants';
 import MoonLoader from "react-spinners/MoonLoader";
 import {useNavigate} from 'react-router-dom';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../../config/RouteConfig';
+import {HomeRoutes} from '../../../config/RouteConfig';
 
 const BodyShopForm = () => {
 const navigate = useNavigate();
@@ -18,7 +18,6 @@ const navigate = useNavigate();
   });
 
   const [loading,setLoading] = useState(false);
-  const [booking,setBooking] = useState([]);
   const [location,setLocation] = useState([]);
   const [franchise_list,setFranchise] = useState([]);
 

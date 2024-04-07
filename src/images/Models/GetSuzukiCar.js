@@ -10,8 +10,7 @@ export default function GetSuzukiCar()
     const [cars,setCars] = useState([]);
 
     const fetchCarOfSuzuki = useCallback(async () =>{
-        await callApi(SuzukiApi.getCarsOfSuzuki.method, SuzukiApi.getCarsOfSuzuki.url, null, null, defaultHeader()).
-        then((res) => {
+        await callApi(SuzukiApi.getCarsOfSuzuki.method, SuzukiApi.getCarsOfSuzuki.url, null, null, defaultHeader()).then((res) => {
             const payload = res?.data?.data;
             if (Array.isArray(payload) && payload.length > 0) {
                 setCars(payload);
@@ -20,10 +19,10 @@ export default function GetSuzukiCar()
             console.log(err)
         })
     },[]);
-
-    useEffect(()=>{
+    useEffect(() => {
         fetchCarOfSuzuki();
-    },[]);
+    }, [fetchCarOfSuzuki]);
+    
 
     return [cars,setCars];
 }

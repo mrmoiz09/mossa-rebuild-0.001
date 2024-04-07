@@ -1,20 +1,12 @@
-import React, { useState, useEffect, useCallback, memo } from 'react'
-import { CommonApi, HomeApi } from '../../config/api';
-import { defaultHeader, toastError, toastSuccess } from '../../services/CommonFunction';
+import React, { useState, useEffect, useCallback } from 'react'
+import { CommonApi } from '../../config/api';
+import { defaultHeader} from '../../services/CommonFunction';
 import { urls } from '../../config/constants';
 import { callApi } from '../../services/ApiService';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
+// import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
 import MoveCursorToTop from '../../services/MoveCursorToTop'
 
-import aboutbanking from "../../images/aboutbanking.jpg"
-import aboutfinance from "../../images/aboutfinance.jpg"
 import  aboutherobanner from "../../images/aboutherobanner.jpg"
-import aboutpostalservices from "../../images/aboutpostalservices.jpg"
-import aboutceo from "../../images/aboutceo.jpg"
-import aboutbusiness from "../../images/aboutbusiness.jpg"
-import aboutagriculture from "../../images/aboutagriculture.jpg"
-import aboutelectricity from "../../images/aboutelectricity.jpg"
-import aboutconstruction from "../../images/aboutconstruction.jpg"
 const Aboutus = () => {
   MoveCursorToTop();
     const [data,setData] = useState([]);
@@ -55,14 +47,14 @@ const Aboutus = () => {
                   <p>Sheikh Moosa was one of the pioneer users and establishers of the Post Office Box in the Sultanate of Oman. Omanis abroad (especially East Africa, other Gulf States, and India) used to send him mails to his personal mailbox and he used to deliver them to people, later on, hence it was like a public address for anyone to use. The company still maintains the same P.O. Box 4 Muscat.</p>
               </div>
               <div className="col-md-4">
-                <img src={`${urls.frontendUrl}/images/about-postal-services.jpg`} alt="About Image" />
+                <img src={`${urls.frontendUrl}/images/about-postal-services.jpg`} alt="" />
               </div>
             </div>
             <div className="row align-content-center">
                 <div className="col-md-4">
                 {data.map((d,i)=>
                 (d?.key_name=='about-image')?
-                    <img src={`${urls.dir_url}/${d?.key_value}`} alt="About Image" />
+                    <img src={`${urls.dir_url}/${d?.key_value}`} alt="" />
                     :
                     null
                     )}
@@ -70,17 +62,17 @@ const Aboutus = () => {
                 <div className="col-md-8">
                     <h4>Our Company</h4>
                     {data.map((d,i)=>(
-                    <p> {(d?.key_name=='company')? d?.key_value: ""}</p>
+                    <p> {(d?.key_name==='company')? d?.key_value: ""}</p>
                      ))}
                     <br />
                     <h4>Our Vision</h4>
                     {data.map((d,i)=>(
-                    <p> {(d?.key_name=='vision')? d?.key_value: ""}</p>
+                    <p> {(d?.key_name==='vision')? d?.key_value: ""}</p>
                      ))}
                      <br />
                     <h4>CEO's Message</h4>
                     {data.map((d,i)=>(
-                    <p> {(d?.key_name=='ceo')? d?.key_value: ""}</p>
+                    <p> {(d?.key_name==='ceo')? d?.key_value: ""}</p>
                      ))}
                 </div>
                 {/*<div className="col-md-12">

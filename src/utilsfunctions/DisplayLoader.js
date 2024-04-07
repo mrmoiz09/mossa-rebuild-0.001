@@ -1,5 +1,4 @@
 import Loader from "react-js-loader";
-import { checkValidObject } from "../services/CommonFunction";
 
 const defaultLoaderProps = {
     type:"bubble-ping",

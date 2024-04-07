@@ -53,10 +53,10 @@ export const previewToaster = (newObj) =>{
 }
 
 //multipart/form-data
-export const AuthHeader = (additional_header_object=null) =>{
+export const AuthHeaderWithMultiPart =(additional_header_object=null) =>{
     try
     {
-        const header =  {[header_key]:`bearer ${getToken()}`,['Content-Type']:"application/json"};
+        const header =  {[header_key]:`bearer ${getToken()}`, 'Content-Type':"multipart/form-data"}; // Change here
         if(checkValidObject(additional_header_object))
         {
             const new_header = {...header,...additional_header_object};

@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { CommonApi } from '../../config/api';
 import { callApi } from '../../services/ApiService';
 import { defaultHeader } from '../../services/CommonFunction';
-import { ContactUsForm } from './Forms/ContactUsForm';
+// import { ContactUsForm } from './Forms/ContactUsForm';
 import MoveCursorToTop from '../../services/MoveCursorToTop';
 
 const ContactUs = () => {
@@ -54,7 +54,7 @@ const ContactUs = () => {
     image2svg();
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [fetchData,fetchData1]);
 
   const settings = {
     dots: true,

@@ -5,7 +5,7 @@ import MoveCursorToTop from '../../services/MoveCursorToTop';
 import { defaultHeader, validateJsonString } from '../../services/CommonFunction';
 import { callApi } from '../../services/ApiService';
 import { Link } from "react-router-dom";
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
+import { HomeRoutes } from '../../config/RouteConfig';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -54,7 +54,7 @@ const Blogs = () => {
     useEffect(() => {
         fetchBlog();
         fetchBlogs();
-    }, [params?.alias]);
+    }, []);
 
     return (
         <>

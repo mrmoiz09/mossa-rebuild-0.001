@@ -15,7 +15,6 @@ const BodyShopForm = () => {
   });
 
   const [loading,setLoading] = useState(false);
-  const [booking,setBooking] = useState([]);
   const [location,setLocation] = useState([]);
   const [franchise_list,setFranchise] = useState([]);
 

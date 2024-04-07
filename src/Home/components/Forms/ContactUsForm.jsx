@@ -1,4 +1,4 @@
-import React, { useMemo ,useState} from 'react'
+import React, { useMemo} from 'react'
 import { useForm } from "react-hook-form";
 import { HomeApi } from '../../../config/api';
 import { callApi } from '../../../services/ApiService';
@@ -7,7 +7,7 @@ import { displayError, formclass } from '../../../services/FormCommon';
 import { phonePattern } from '../../../services/Patterns';
 import { validationMsg } from '../../../config/constants';
 import {useNavigate} from 'react-router-dom';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../../config/RouteConfig';
+import {HomeRoutes} from '../../../config/RouteConfig';
 
 const ContactUsForm = () => {
 const navigate = useNavigate();

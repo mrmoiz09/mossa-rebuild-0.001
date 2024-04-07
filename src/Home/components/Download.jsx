@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback, memo } from 'react'
-import { CommonApi, HomeApi } from '../../config/api';
+import { CommonApi} from '../../config/api';
 import { urls } from '../../config/constants';
 import { callApi } from '../../services/ApiService';
 import { defaultHeader, toastError, toastSuccess } from '../../services/CommonFunction';
 // import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
-import { Navigation,Pagination, EffectFade, Autoplay } from 'swiper'
-import { image2svg } from '../../utilsfunctions/Svg';
-import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
-import { Link } from "react-router-dom";
-import AOS from 'aos';
+// import { Navigation,Pagination, EffectFade, Autoplay } from 'swiper'
+// import { image2svg } from '../../utilsfunctions/Svg';
+// import { commonRoutes, HomeRoutes, SuzukiRoutes } from '../../config/RouteConfig';
+// import { Link } from "react-router-dom";
+// import AOS from 'aos';
 import "aos/dist/aos.css";
 import MoveCursorToTop from '../../services/MoveCursorToTop';
 const Download = () => {
@@ -34,7 +34,7 @@ const Download = () => {
   
    useEffect(() => {
       fetchData();
-  }, []);
+  }, [fetchData]);
   return (
     <>
      <section className="hero__banner_inner--block" style={{backgroundImage: "url('../images/about-hero-banner.jpg')"}}>
@@ -48,10 +48,10 @@ const Download = () => {
           <div className="container">
             <div class="row">
             {data.map((d,i)=>(
-                (d.type=='1')?
+                (d.type==='1')?
                 
                 <div class="col-md-3">
-                    <figure class="text-center"><a href={`${urls.dir_url}/${d?.files}`} target="_blank"><img src={`${urls.dir_url}/${d?.image}`} alt="Exterior"/><h4 style={{marginTop:'5px'}}>{d?.title}</h4></a></figure>
+                    <figure class="text-center"><a href={`${urls.dir_url}/${d?.files}`} target="_blank"  rel="noreferrer" ><img src={`${urls.dir_url}/${d?.image}`} alt="Exterior"/><h4 style={{marginTop:'5px'}}>{d?.title}</h4></a></figure>
                 </div>
                 : null
                 )
